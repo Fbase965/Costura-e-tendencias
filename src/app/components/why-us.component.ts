@@ -11,31 +11,31 @@ import { CommonModule } from '@angular/common';
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <!-- Left: Atelier Visuals -->
+          <!-- Left: Real Works Composition -->
           <div class="lg:col-span-6 relative">
             <div class="grid grid-cols-2 gap-4">
               <div class="space-y-4">
-                <div class="rounded-2xl overflow-hidden shadow-md bg-slate-100 h-48 sm:h-60">
-                  <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" alt="Tecidos e corte artesanal" class="w-full h-full object-cover" />
+                <div class="rounded-2xl overflow-hidden shadow-md bg-slate-100 h-48 sm:h-60 border border-slate-100">
+                  <img src="assets/service-cortinados.jpg" alt="Instalação de cortinados no quarto" class="w-full h-full object-cover" />
                 </div>
-                <div class="rounded-2xl overflow-hidden shadow-md bg-slate-100 h-36 sm:h-44">
-                  <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80" alt="Tecidos para o lar" class="w-full h-full object-cover" />
+                <div class="rounded-2xl overflow-hidden shadow-md bg-slate-100 h-36 sm:h-44 border border-slate-100">
+                  <img src="assets/service-mesa.jpg" alt="Toalha de mesa confeccionada" class="w-full h-full object-cover" />
                 </div>
               </div>
 
               <div class="space-y-4 pt-6">
-                <div class="rounded-2xl overflow-hidden shadow-md bg-slate-100 h-36 sm:h-44">
-                  <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Cortinados instalados na sala" class="w-full h-full object-cover" />
+                <div class="rounded-2xl overflow-hidden shadow-md bg-slate-100 h-36 sm:h-44 border border-slate-100">
+                  <img src="assets/service-estores.jpg" alt="Estore de rolo em janela" class="w-full h-full object-cover" />
                 </div>
-                <div class="rounded-2xl overflow-hidden shadow-md bg-slate-100 h-48 sm:h-60">
-                  <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=800&q=80" alt="Cama com lençóis de qualidade" class="w-full h-full object-cover" />
+                <div class="rounded-2xl overflow-hidden shadow-md bg-slate-100 h-48 sm:h-60 border border-slate-100">
+                  <img src="assets/service-cama.jpg" alt="Roupa de cama 100% algodão" class="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
 
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-950 text-white p-5 rounded-2xl shadow-xl text-center border-4 border-white max-w-[200px]">
               <span class="block text-2xl font-extrabold text-amber-300 font-serif">100%</span>
-              <span class="text-xs font-bold uppercase tracking-wider">Atelier &amp; Instalação no Lar</span>
+              <span class="text-xs font-bold uppercase tracking-wider">Trabalhos Reais de Atelier</span>
             </div>
           </div>
 
@@ -51,7 +51,7 @@ import { CommonModule } from '@angular/common';
             </h2>
 
             <p class="text-base text-slate-600 leading-relaxed">
-              Na <strong>Costura &amp; Tendências</strong> acompanhamos o seu projeto do início ao fim: desde a escolha e medição dos tecidos no seu ambiente até à montagem e instalação final.
+              Na <strong>Costura &amp; Tendências</strong> acompanhamos o seu projeto do início ao fim: desde a escolha dos tecidos e medição no seu ambiente até à montagem e instalação técnica final.
             </p>
 
             <div class="space-y-4 pt-2">
@@ -82,7 +82,7 @@ import { CommonModule } from '@angular/common';
                 </div>
                 <div>
                   <h4 class="text-sm font-bold text-slate-900">Montagem &amp; Instalação Chave-na-Mão</h4>
-                  <p class="text-xs text-slate-500 mt-0.5">Levamos, montamos as calhas/varões e penduramos os cortinados com caimento impecável (ou levantamento no atelier).</p>
+                  <p class="text-xs text-slate-500 mt-0.5">Levamos, montamos as calhas/varões e penduramos os cortinados e estores com caimento impecável (ou levantamento no atelier).</p>
                 </div>
               </div>
 

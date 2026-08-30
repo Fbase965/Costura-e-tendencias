@@ -29,13 +29,13 @@ import { CatalogService } from '../services/catalog.service';
 
             <!-- Descriptive Subtitle -->
             <p class="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed font-normal">
-              Confeção de cortinados sob medida com <strong>instalação na sua casa</strong>, jogos de cama em 100% algodão português, toalhas de banho hotel e toalhas de mesa antimanchas com acabamento artesanal de excelência.
+              Confeção de cortinados sob medida com <strong>instalação na sua casa</strong>, estores de rolo, roupa de cama em 100% algodão português e atoalhados de mesa com acabamento artesanal de excelência.
             </p>
 
             <!-- Action Buttons -->
             <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
               <a href="#servicos" class="inline-flex items-center justify-center gap-2 bg-slate-950 hover:bg-slate-800 text-white px-6 py-4 rounded-xl text-base font-bold shadow-md hover:shadow-lg transition-all active:scale-[0.98]">
-                <span>Ver Serviços &amp; Especialidades</span>
+                <span>Ver Serviços &amp; Trabalhos Reais</span>
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -67,25 +67,25 @@ import { CatalogService } from '../services/catalog.service';
 
           </div>
 
-          <!-- Right Column: Visual Composition with real textiles -->
+          <!-- Right Column: Real Installation Photo -->
           <div class="lg:col-span-5 relative">
             <div class="relative mx-auto max-w-md lg:max-w-none">
               
-              <!-- Main Hero Image -->
+              <!-- Main Hero Image: Real Curtain Installation by Costura & Tendências -->
               <div class="relative rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&w=1000&q=80" 
-                  alt="Quarto com roupa de cama e cortinados de luxo" 
+                  src="assets/hero-cortinado.jpg" 
+                  alt="Instalação real de cortinados de onda perfeita da Costura & Tendências" 
                   class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700"
                 />
                 
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-6">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
                   <div class="text-white">
-                    <span class="inline-block bg-white/20 backdrop-blur-md text-white text-[11px] font-bold px-2.5 py-1 rounded mb-1">
-                      Confeção &amp; Instalação
+                    <span class="inline-block bg-emerald-600/90 backdrop-blur-xs text-white text-[11px] font-extrabold px-2.5 py-1 rounded mb-1">
+                      Trabalho Real • Costura &amp; Tendências
                     </span>
-                    <h3 class="text-lg font-bold">Cortinados &amp; Roupa de Cama</h3>
-                    <p class="text-xs text-slate-200">Montagem de calhas e cortinados no domicílio</p>
+                    <h3 class="text-lg font-bold">Cortinados de Onda Perfeita</h3>
+                    <p class="text-xs text-slate-200">Confeção e instalação completa em casa de cliente</p>
                   </div>
                 </div>
               </div>
@@ -99,7 +99,7 @@ import { CatalogService } from '../services/catalog.service';
                 </div>
                 <div>
                   <h4 class="text-sm font-bold text-slate-900 leading-tight">Instalação no Lar</h4>
-                  <p class="text-xs text-slate-500">Vamos a sua casa tirar medidas e fazer a montagem</p>
+                  <p class="text-xs text-slate-500">Deslocamo-nos ao seu espaço para medição e montagem</p>
                 </div>
               </div>
 

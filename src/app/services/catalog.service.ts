@@ -415,18 +415,18 @@ export class CatalogService {
       location: 'Póvoa de Varzim',
       rating: 5,
       date: 'Há 2 semanas',
-      comment: 'Vieram a minha casa tirar as medidas, aconselharam-me o melhor tecido e fizeram a instalação completa dos cortinados de onda perfeita na sala e quartos. O serviço de montagem é espetacular!',
-      service: 'Medição & Instalação de Cortinados ao Domicílio',
+      comment: 'Vieram a minha casa tirar as medidas, aconselharam-me o melhor tecido e fizeram a instalação completa dos cortinados de onda perfeita na sala e nos quartos. O serviço de montagem é espetacular!',
+      service: 'Cortinados de Onda Perfeita com Instalação',
       verified: true
     },
     {
       id: 't2',
-      name: 'Carlos Oliveira',
+      name: 'Rui Moreira',
       location: 'Vila do Conde',
       rating: 5,
-      date: 'Há 1 mês',
-      comment: 'Encomendei uma capa sob medida para o meu sofá com chaise longue e vieram fazer a colocação e ajuste em minha casa. O tecido é resistente e impermeável. Recomendo vivamente!',
-      service: 'Capa de Sofá Sob Medida c/ Ajuste no Local',
+      date: 'Há 3 semanas',
+      comment: 'Fizeram a instalação dos estores de rolo e cortinados na sala. Ficaram impecáveis e o corte é de uma precisão incrível. Recomendo vivamente o atelier de Argivai!',
+      service: 'Estores de Rolo & Cortinados de Sala',
       verified: true
     },
     {
@@ -435,8 +435,8 @@ export class CatalogService {
       location: 'Argivai',
       rating: 5,
       date: 'Há 1 mês',
-      comment: 'Comprei os lençóis de percal 200 fios e as toalhas de 600g diretamente no atelier em Argivai. A qualidade do algodão português nota-se logo ao primeiro toque.',
-      service: 'Roupa de Cama & Banho no Atelier',
+      comment: 'Comprei os lençóis de 100% algodão e toalhas de banho diretamente no atelier. A qualidade dos tecidos portugueses nota-se logo ao primeiro toque, super macios e resistentes às lavagens.',
+      service: 'Roupa de Cama & Têxteis de Lar',
       verified: true
     },
     {
@@ -445,8 +445,8 @@ export class CatalogService {
       location: 'Póvoa de Varzim',
       rating: 5,
       date: 'Há 2 meses',
-      comment: 'Cliente habitual! Montaram-me as calhas e cortinados e também fizeram toalhas de mesa por medida. Profissionalismo de excelência, pontuais e cuidadosos em casa.',
-      service: 'Montagem de Calhas & Têxteis de Mesa',
+      comment: 'Cliente habitual! Já me montaram as calhas e cortinados e também fizeram toalhas de mesa por medida para a sala de jantar. Profissionalismo de excelência, pontuais e muito asseados durante a montagem.',
+      service: 'Montagem de Calhas & Toalhas de Mesa',
       verified: true
     }
   ];
