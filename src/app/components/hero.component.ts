@@ -67,46 +67,22 @@ import { CatalogService } from '../services/catalog.service';
 
           </div>
 
-          <!-- Right Column: Real Installation Photo -->
-          <div class="lg:col-span-5 relative">
+          <!-- Right Column: Clean & Unobstructed Real Installation Photo -->
+          <div class="lg:col-span-5">
             <div class="relative mx-auto max-w-md lg:max-w-none">
               
-              <!-- Main Hero Image: Real Curtain Installation by Costura & Tendências -->
-              <div class="relative rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-white">
+              <div class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-100 bg-white group">
                 <img 
                   src="assets/hero-cortinado.jpg" 
                   alt="Instalação real de cortinados de onda perfeita da Costura & Tendências" 
-                  class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition-transform duration-700"
+                  class="w-full h-80 sm:h-[420px] object-cover object-center group-hover:scale-102 transition-transform duration-700"
                 />
                 
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
-                  <div class="text-white">
-                    <span class="inline-block bg-emerald-600/90 backdrop-blur-xs text-white text-[11px] font-extrabold px-2.5 py-1 rounded mb-1">
-                      Trabalho Real • Costura &amp; Tendências
-                    </span>
-                    <h3 class="text-lg font-bold">Cortinados de Onda Perfeita</h3>
-                    <p class="text-xs text-slate-200">Confeção e instalação completa em casa de cliente</p>
-                  </div>
+                <!-- Minimal clean provenance label -->
+                <div class="absolute bottom-4 left-4 bg-slate-950/80 backdrop-blur-md text-white px-3.5 py-1.5 rounded-lg border border-white/10 text-xs font-bold flex items-center gap-2 shadow-md">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span>Trabalho Real • Costura &amp; Tendências</span>
                 </div>
-              </div>
-
-              <!-- Floating Badge: Quality Tag -->
-              <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border border-slate-100 flex items-center gap-3.5 max-w-xs">
-                <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold">
-                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="text-sm font-bold text-slate-900 leading-tight">Instalação no Lar</h4>
-                  <p class="text-xs text-slate-500">Deslocamo-nos ao seu espaço para medição e montagem</p>
-                </div>
-              </div>
-
-              <!-- Floating Badge: WhatsApp Link -->
-              <div class="hidden sm:flex absolute -top-4 -right-4 bg-slate-900 text-white px-3.5 py-2 rounded-lg shadow-md items-center gap-2 text-xs font-semibold">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-                <span>Atendimento Direto +351 919 943 031</span>
               </div>
 
             </div>
