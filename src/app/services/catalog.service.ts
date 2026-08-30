@@ -454,7 +454,11 @@ export class CatalogService {
   readonly faqs = [
     {
       question: 'Como funciona o serviço de Medição & Instalação em casa?',
-      answer: 'Para sua total comodidade, deslocamo-nos ao seu domicílio para tirar as medidas exatas, levar amostras de tecidos para ver no seu próprio espaço e, após a confecção no atelier, realizamos a montagem completa de calhas, varões e cortinados (serviço de montagem/deslocação orçamentado sob consulta de acordo com a localidade).'
+      answer: 'Para sua total comodidade, deslocamo-nos ao seu domicílio para tirar as medidas exatas, levar as amostras de tecidos da nossa coleção e, após a confecção no atelier, realizamos a montagem completa de calhas, varões e cortinados (serviço de montagem/deslocação orçamentado sob consulta de acordo com a localidade).'
+    },
+    {
+      question: 'Posso levar o meu próprio tecido para a confecção dos cortinados?',
+      answer: 'Não. Na Costura & Tendências não trabalhamos com tecidos trazidos de fora. Todos os tecidos são fornecidos exclusivamente pelo nosso atelier e pelos nossos fornecedores certificados de alta qualidade. Esta exigência garante o caimento perfeito, a durabilidade do tecido e o resultado impecável na montagem final.'
     },
     {
       question: 'Fazem envios por correio ou transportadora?',
@@ -462,11 +466,7 @@ export class CatalogService {
     },
     {
       question: 'Como posso pedir um orçamento para a minha casa?',
-      answer: 'É muito simples! Pode contactar-nos diretamente pelo WhatsApp (+351 919 943 031) ou por chamada telefónica. Basta indicar a sua localidade e o tipo de trabalho pretendido (cortinados, capas de sofá, roupa de cama) e agendamos a visita ou apresentamos a proposta.'
-    },
-    {
-      question: 'Posso levar o meu próprio tecido para vocês confeccionarem?',
-      answer: 'Sim! No nosso atelier em Argivai fazemos serviço de corte e costura com tecidos trazidos pelo cliente (cortinados, bainhas, arranjos e capas), ou disponibilizamos a nossa vasta coleção de tecidos de alta qualidade.'
+      answer: 'É muito simples! Pode contactar-nos diretamente pelo WhatsApp (+351 919 943 031) ou por chamada telefónica. Basta indicar a sua localidade e o tipo de trabalho pretendido (cortinados sob medida, roupa de cama, toalhas) e agendamos a visita ou apresentamos a proposta.'
     },
     {
       question: 'Quais são as formas de pagamento disponíveis?',
