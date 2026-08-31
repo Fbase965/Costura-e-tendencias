@@ -8,45 +8,45 @@ import { CatalogService } from '../services/catalog.service';
   standalone: true,
   imports: [CommonModule, FormsModule],
   template: `
-    <section id="contacto" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-100 pb-28 sm:pb-20">
+    <section id="contacto" class="py-20 sm:py-28 bg-[#FAF8F5] border-b border-[#EAE3D9] pb-32 sm:pb-28">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Header -->
-        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
-          <div class="inline-flex items-center gap-2 bg-white border border-slate-200 px-4 py-1 rounded-full text-xs font-extrabold text-slate-900 uppercase tracking-widest mb-3 shadow-2xs">
-            <span>Visite-nos ou Fale Connosco</span>
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
-            Contactos &amp; Localização
+        <!-- Header with Serif Elegance -->
+        <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+          <span class="text-[11px] font-sans font-bold text-[#78716C] uppercase tracking-[0.25em] block mb-2">
+            Localização &amp; Atendimento
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1C1917] tracking-tight">
+            Visite o Atelier ou Fale Connosco
           </h2>
-          <p class="text-sm sm:text-base text-slate-600 mt-2.5 max-w-2xl mx-auto">
-            Estamos localizados em Argivai, na Póvoa de Varzim. Teremos todo o gosto em recebê-lo(a) no atelier ou agendar uma deslocação a sua casa.
+          <p class="text-sm sm:text-base text-[#57534E] mt-3 max-w-xl mx-auto font-sans">
+            Estamos localizados em Argivai, na Póvoa de Varzim. Teremos todo o gosto em recebê-lo(a) ou agendar uma visita de medição em sua casa.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           
-          <!-- Left: Large Visual Contact Cards -->
-          <div class="lg:col-span-5 space-y-4">
+          <!-- Left: Atelier Direct Contact Cards -->
+          <div class="lg:col-span-5 space-y-5">
             
             <!-- Direct Phone & WhatsApp Card -->
-            <div class="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-xs space-y-4">
-              <h3 class="font-extrabold text-base sm:text-lg text-slate-950">Atendimento Direto</h3>
+            <div class="bg-white p-7 rounded-3xl border border-[#EAE3D9] shadow-sm space-y-4">
+              <h3 class="font-serif font-bold text-xl text-[#1C1917]">Atendimento Direto</h3>
               
               <div class="space-y-3">
                 <!-- Phone Direct Tap -->
                 <a 
                   href="tel:+351919943031" 
-                  class="flex items-center gap-3.5 p-4 rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-all shadow-xs active:scale-98"
+                  class="flex items-center gap-3.5 p-4 rounded-2xl bg-[#1C1917] text-white hover:bg-[#292524] transition-all shadow-xs active:scale-98"
                 >
-                  <div class="w-10 h-10 bg-slate-800 text-emerald-400 rounded-xl flex items-center justify-center shrink-0">
+                  <div class="w-10 h-10 bg-[#292524] text-emerald-400 rounded-xl flex items-center justify-center shrink-0">
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                   <div class="text-left leading-tight">
-                    <span class="text-slate-300 font-bold block text-[11px] uppercase tracking-wider">Chamada Telefónica</span>
-                    <span class="font-black text-base text-white">+351 919 943 031</span>
+                    <span class="text-[#A8A196] font-bold block text-[10px] uppercase tracking-wider font-sans">Chamada Telefónica</span>
+                    <span class="font-extrabold text-base text-white font-sans">+351 919 943 031</span>
                   </div>
                 </a>
 
@@ -55,7 +55,7 @@ import { CatalogService } from '../services/catalog.service';
                   [href]="'https://wa.me/' + catalogService.PHONE_CLEAN" 
                   target="_blank" 
                   rel="noopener" 
-                  class="flex items-center gap-3.5 p-4 rounded-xl bg-[#25D366] text-white hover:bg-[#20bd5a] transition-all shadow-xs active:scale-98"
+                  class="flex items-center gap-3.5 p-4 rounded-2xl bg-[#25D366] text-white hover:bg-[#20bd5a] transition-all shadow-xs active:scale-98"
                 >
                   <div class="w-10 h-10 bg-white/20 text-white rounded-xl flex items-center justify-center shrink-0">
                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -63,145 +63,146 @@ import { CatalogService } from '../services/catalog.service';
                     </svg>
                   </div>
                   <div class="text-left leading-tight">
-                    <span class="text-emerald-100 font-bold block text-[11px] uppercase tracking-wider">Conversa no WhatsApp</span>
-                    <span class="font-black text-base text-white">Enviar Mensagem</span>
+                    <span class="text-emerald-100 font-bold block text-[10px] uppercase tracking-wider font-sans">Conversa no WhatsApp</span>
+                    <span class="font-extrabold text-base text-white font-sans">Enviar Mensagem</span>
                   </div>
                 </a>
 
-                <!-- Facebook Page Direct Tap -->
+                <!-- Facebook Direct Tap -->
                 <a 
                   [href]="catalogService.FACEBOOK_URL" 
                   target="_blank" 
                   rel="noopener" 
-                  class="flex items-center gap-3.5 p-3.5 rounded-xl bg-blue-50 hover:bg-blue-100/70 transition-colors border border-blue-200"
+                  class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-blue-50/70 hover:bg-blue-100/70 transition-colors border border-blue-200/80"
                 >
-                  <div class="w-9 h-9 bg-blue-600 text-white rounded-lg flex items-center justify-center shrink-0">
+                  <div class="w-9 h-9 bg-blue-600 text-white rounded-xl flex items-center justify-center shrink-0">
                     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
                   </div>
                   <div class="text-left">
-                    <span class="text-blue-800 font-medium block text-[10px]">Página de Facebook</span>
-                    <span class="font-bold text-xs text-blue-950">Costura &amp; Tendências</span>
+                    <span class="text-blue-800 font-medium block text-[10px] font-sans">Página de Facebook</span>
+                    <span class="font-bold text-xs text-blue-950 font-sans">Costura &amp; Tendências</span>
                   </div>
                 </a>
               </div>
             </div>
 
-            <!-- Atelier Address & Hours -->
-            <div class="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-xs space-y-3">
-              <h3 class="font-extrabold text-base sm:text-lg text-slate-950">Morada &amp; Horário</h3>
+            <!-- Atelier Location & Hours Card -->
+            <div class="bg-white p-7 rounded-3xl border border-[#EAE3D9] shadow-sm space-y-3 font-sans">
+              <h3 class="font-serif font-bold text-xl text-[#1C1917]">Morada &amp; Horário</h3>
               
-              <div class="text-xs text-slate-600 space-y-2.5">
+              <div class="text-xs text-[#57534E] space-y-2.5">
                 <div class="flex items-start gap-2.5">
-                  <span class="text-lg">📍</span>
-                  <p><strong class="text-slate-950">Argivai</strong>, Póvoa de Varzim, Portugal</p>
+                  <span class="text-base shrink-0">📍</span>
+                  <p><strong class="text-[#1C1917]">Argivai</strong>, Póvoa de Varzim, Portugal</p>
                 </div>
 
                 <div class="flex items-start gap-2.5">
-                  <span class="text-lg">🕒</span>
-                  <div class="space-y-0.5">
-                    <p><strong class="text-slate-950">Segunda a Sexta:</strong> 09:00 - 19:00</p>
-                    <p><strong class="text-slate-950">Sábado:</strong> 09:30 - 13:00</p>
-                    <p><strong class="text-slate-950">Domingo:</strong> Encerrado</p>
+                  <span class="text-base shrink-0">🕒</span>
+                  <div>
+                    <p class="font-bold text-[#1C1917]">Segunda a Sexta: 09:00 - 19:00</p>
+                    <p>Sábado: 09:30 - 13:00</p>
+                    <p class="text-[11px] text-[#78716C] mt-0.5">Domingos e Feriados: Encerrado</p>
                   </div>
+                </div>
+
+                <div class="flex items-start gap-2.5">
+                  <span class="text-base shrink-0">🚗</span>
+                  <p>Estacionamento fácil e gratuito junto ao atelier.</p>
                 </div>
               </div>
             </div>
 
           </div>
 
-          <!-- Right: Interactive Form / Message -->
-          <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs space-y-5">
+          <!-- Right: Clean Contact Form -->
+          <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-[#EAE3D9] shadow-sm space-y-6">
             
             <div>
-              <h3 class="font-extrabold text-xl text-slate-950">Fale Connosco</h3>
-              <p class="text-xs text-slate-500 mt-1">Preencha os seus dados e responderemos com toda a comodidade pelo WhatsApp ou telefone para tirar dúvidas ou agendar uma medição.</p>
+              <h3 class="font-serif font-bold text-2xl text-[#1C1917]">Fale Connosco</h3>
+              <p class="text-xs sm:text-sm text-[#78716C] mt-1 font-sans">Preencha os seus dados e entraremos em contacto consigo pelo WhatsApp ou telefone para tirar dúvidas ou agendar uma medição.</p>
             </div>
 
             @if (formSent()) {
-              <div class="p-6 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-2">
-                <div class="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto">
-                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
+              <div class="p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-2">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center mx-auto text-xl font-bold">
+                  ✓
                 </div>
-                <h4 class="font-bold text-slate-900 text-sm">Mensagem enviada com sucesso!</h4>
-                <p class="text-xs text-slate-600">Obrigado pelo contacto. Responderemos em breve.</p>
-                <button (click)="formSent.set(false)" class="text-xs font-bold text-emerald-800 underline mt-2 cursor-pointer">
-                  Enviar outra mensagem
-                </button>
+                <h4 class="font-bold text-sm text-emerald-950 font-sans">Mensagem Enviada com Sucesso!</h4>
+                <p class="text-xs text-emerald-800 font-sans">Obrigado pelo seu contacto. Entraremos em contacto muito brevemente pelo WhatsApp ou chamada.</p>
               </div>
             } @else {
-              <form (submit)="submitForm($event)" class="space-y-4">
+              <form (submit)="submitForm($event)" class="space-y-4 font-sans">
+                
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label class="block text-xs font-bold text-slate-900 uppercase tracking-wider mb-1">Nome Completo:</label>
+                  <div class="space-y-1.5">
+                    <label class="text-xs font-bold text-[#1C1917]">O Seu Nome *</label>
                     <input 
                       type="text" 
-                      required 
-                      [(ngModel)]="name" 
                       name="name" 
-                      placeholder="O seu nome"
-                      class="w-full text-xs p-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-950"
+                      [(ngModel)]="formData.name" 
+                      required 
+                      placeholder="Ex: Maria Silva" 
+                      class="w-full px-4 py-3.5 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-xs sm:text-sm transition-all"
                     />
                   </div>
 
-                  <div>
-                    <label class="block text-xs font-bold text-slate-900 uppercase tracking-wider mb-1">Telemóvel / WhatsApp:</label>
+                  <div class="space-y-1.5">
+                    <label class="text-xs font-bold text-[#1C1917]">Telemóvel / WhatsApp *</label>
                     <input 
                       type="tel" 
-                      required 
-                      [(ngModel)]="phone" 
                       name="phone" 
-                      placeholder="Ex: 919 943 031"
-                      class="w-full text-xs p-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-950"
+                      [(ngModel)]="formData.phone" 
+                      required 
+                      placeholder="Ex: 912 345 678" 
+                      class="w-full px-4 py-3.5 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-xs sm:text-sm transition-all"
                     />
                   </div>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label class="block text-xs font-bold text-slate-900 uppercase tracking-wider mb-1">Especialidade Pretendida:</label>
-                    <select 
-                      [(ngModel)]="serviceType" 
-                      name="serviceType"
-                      class="w-full text-xs p-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-950 font-medium"
-                    >
-                      <option value="cortinados-calha">Cortinados de Onda Perfeita em Calha</option>
-                      <option value="estores-rolo">Estores de Rolo &amp; Blackout Técnico</option>
-                      <option value="roupa-cama">Roupa de Cama &amp; Edredões 100% Algodão</option>
-                      <option value="mesa-cozinha">Toalhas de Mesa Confeccionadas por Medida</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label class="block text-xs font-bold text-slate-900 uppercase tracking-wider mb-1">Localidade da Sua Casa:</label>
+                  <div class="space-y-1.5">
+                    <label class="text-xs font-bold text-[#1C1917]">Localidade (para medição)</label>
                     <input 
                       type="text" 
-                      [(ngModel)]="location" 
                       name="location" 
-                      placeholder="Ex: Póvoa de Varzim, Vila do Conde, Porto..."
-                      class="w-full text-xs p-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-950"
+                      [(ngModel)]="formData.location" 
+                      placeholder="Ex: Póvoa de Varzim, Vila do Conde, etc." 
+                      class="w-full px-4 py-3.5 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-xs sm:text-sm transition-all"
                     />
+                  </div>
+
+                  <div class="space-y-1.5">
+                    <label class="text-xs font-bold text-[#1C1917]">Artigo de Interesse</label>
+                    <select 
+                      name="interest" 
+                      [(ngModel)]="formData.interest"
+                      class="w-full px-4 py-3.5 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-xs sm:text-sm transition-all"
+                    >
+                      <option value="Cortinados de Onda Perfeita em Calha">Cortinados em Calha Técnica</option>
+                      <option value="Estores de Rolo & Blackout">Estores de Rolo / Blackout</option>
+                      <option value="Roupa de Cama 100% Algodão">Roupa de Cama 100% Algodão</option>
+                      <option value="Toalhas de Mesa por Medida">Toalhas de Mesa por Medida</option>
+                      <option value="Outro Artigo ou Dúvida">Outro Assunto / Dúvida</option>
+                    </select>
                   </div>
                 </div>
 
-                <div>
-                  <label class="block text-xs font-bold text-slate-900 uppercase tracking-wider mb-1">A sua Mensagem ou Dimensões:</label>
+                <div class="space-y-1.5">
+                  <label class="text-xs font-bold text-[#1C1917]">Mensagem / Detalhes (Opcional)</label>
                   <textarea 
-                    rows="4" 
-                    required 
-                    [(ngModel)]="message" 
                     name="message" 
-                    placeholder="Descreva o tipo de cortinados em calha, tecidos ou agendamento de medição..."
-                    class="w-full text-xs p-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-950"
+                    [(ngModel)]="formData.message" 
+                    rows="3" 
+                    placeholder="Indique-nos se pretende agendamento de medição em sua casa ou informações sobre tecidos..." 
+                    class="w-full px-4 py-3 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-xs sm:text-sm transition-all resize-none"
                   ></textarea>
                 </div>
 
                 <button 
                   type="submit" 
-                  class="w-full bg-slate-950 hover:bg-slate-800 text-white py-4 px-6 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all cursor-pointer active:scale-98"
+                  class="w-full bg-[#1C1917] hover:bg-[#292524] text-white py-4 px-6 rounded-xl font-bold text-xs sm:text-sm shadow-sm transition-all cursor-pointer active:scale-98"
                 >
                   Enviar Mensagem
                 </button>
@@ -218,23 +219,24 @@ import { CatalogService } from '../services/catalog.service';
 })
 export class ContactComponent {
   catalogService = inject(CatalogService);
-
-  name = '';
-  phone = '';
-  location = '';
-  serviceType = 'cortinados-calha';
-  message = '';
   formSent = signal(false);
+
+  formData = {
+    name: '',
+    phone: '',
+    location: '',
+    interest: 'Cortinados de Onda Perfeita em Calha',
+    message: ''
+  };
 
   submitForm(e: Event) {
     e.preventDefault();
-    if (!this.name || !this.phone || !this.message) return;
+    if (!this.formData.name || !this.formData.phone) return;
 
-    let text = `Olá! O meu nome é *${this.name}* (Tel: ${this.phone}).\nServiço pretendido: *${this.serviceType}*`;
-    if (this.location) text += `\nLocalidade: ${this.location}`;
-    text += `\nMensagem: ${this.message}`;
-
+    // Send direct to WhatsApp with all filled fields
+    const text = `*Novo Contacto do Site*\n👤 Nome: ${this.formData.name}\n📱 Telemóvel: ${this.formData.phone}\n📍 Localidade: ${this.formData.location || 'Não especificada'}\n🪟 Interesse: ${this.formData.interest}\n💬 Mensagem: ${this.formData.message || 'Sem notas adicionais'}`;
     const url = `https://wa.me/${this.catalogService.PHONE_CLEAN}?text=${encodeURIComponent(text)}`;
+    
     window.open(url, '_blank');
     this.formSent.set(true);
   }

@@ -7,38 +7,38 @@ import { CatalogService } from '../services/catalog.service';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section class="py-16 bg-white border-b border-slate-100">
+    <section id="faq" class="py-20 sm:py-28 bg-white border-b border-[#EAE3D9]">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Header -->
-        <div class="text-center mb-10">
-          <div class="inline-flex items-center gap-2 bg-slate-100 border border-slate-200 px-3 py-1 rounded-full text-xs font-bold text-slate-800 uppercase tracking-widest mb-3">
-            <span>Dúvidas Frequentes</span>
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Perguntas &amp; Respostas
+        <!-- Header with Serif Elegance -->
+        <div class="text-center mb-14 sm:mb-16">
+          <span class="text-[11px] font-sans font-bold text-[#78716C] uppercase tracking-[0.25em] block mb-2">
+            Esclarecimentos
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1C1917] tracking-tight">
+            Perguntas Frequentes
           </h2>
-          <p class="text-base text-slate-600 mt-2">
-            Tudo o que precisa de saber sobre encomendas, medições e prazos de entrega.
+          <p class="text-sm sm:text-base text-[#57534E] mt-3 font-sans max-w-lg mx-auto">
+            Tudo o que precisa de saber sobre o serviço de medição, confeção de cortinados em calha e encomendas.
           </p>
         </div>
 
-        <!-- Accordion List -->
-        <div class="space-y-3">
+        <!-- Accordion List with Warm Atelier Styling -->
+        <div class="space-y-3.5">
           @for (faq of catalogService.faqs; track faq.question; let idx = $index) {
-            <div class="rounded-xl border border-slate-200 overflow-hidden bg-slate-50/50">
+            <div class="rounded-2xl border border-[#EAE3D9] overflow-hidden bg-[#FAF8F5] transition-all">
               <button 
                 (click)="toggle(idx)"
-                class="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 font-bold text-sm text-slate-900 hover:bg-slate-100/60 transition-colors cursor-pointer"
+                class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-sans font-bold text-sm sm:text-base text-[#1C1917] hover:bg-[#F5EFEB] transition-colors cursor-pointer"
               >
                 <span>{{ faq.question }}</span>
-                <span class="text-slate-400 font-normal shrink-0 text-lg">
+                <span class="text-[#78716C] font-normal shrink-0 text-xl font-serif">
                   {{ openIndex() === idx ? '−' : '+' }}
                 </span>
               </button>
 
               @if (openIndex() === idx) {
-                <div class="p-4 sm:p-5 pt-0 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-white">
+                <div class="p-5 sm:p-6 pt-0 text-xs sm:text-sm text-[#57534E] leading-relaxed border-t border-[#EAE3D9] bg-white font-sans">
                   {{ faq.answer }}
                 </div>
               }

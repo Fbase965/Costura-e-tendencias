@@ -5,15 +5,19 @@
 @layer base {
   html {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    color: #1e293b;
-    background-color: #ffffff;
+    color: #292524;
+    background-color: #FAF8F5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Outfit', sans-serif;
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
     letter-spacing: -0.02em;
+  }
+
+  h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   svg {
@@ -23,51 +27,51 @@
   }
 }
 
-/* Custom Stitch Border (Linha de Pesponto de Atelier) */
-.stitch-border {
-  background-image: repeating-linear-gradient(0deg, #94a3b8, #94a3b8 6px, transparent 6px, transparent 12px), repeating-linear-gradient(90deg, #94a3b8, #94a3b8 6px, transparent 6px, transparent 12px), repeating-linear-gradient(180deg, #94a3b8, #94a3b8 6px, transparent 6px, transparent 12px), repeating-linear-gradient(270deg, #94a3b8, #94a3b8 6px, transparent 6px, transparent 12px);
-  background-size: 1px 100%, 100% 1px, 1px 100% , 100% 1px;
-  background-position: 0 0, 0 0, 100% 0, 0 100%;
-  background-repeat: no-repeat;
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
-.woven-tag {
-  position: relative;
-  background: #f8fafc;
-  border-left: 3px solid #0f172a;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
-@keyframes pulseSubtle {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
-.animate-pulse-subtle {
-  animation: pulseSubtle 2.5s infinite ease-in-out;
+/* Warm Linen & Atelier Accents */
+.bg-warm-canvas {
+  background-color: #FAF8F5;
+}
+
+.bg-warm-stone {
+  background-color: #F5EFEB;
+}
+
+.bg-warm-card {
+  background-color: #FFFFFF;
+}
+
+.border-warm-border {
+  border-color: #EAE3D9;
 }
 
 /* Custom scrollbars */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #FAF8F5;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #D6CEC3;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #A8A196;
 }
 
-/* Hide scrollbar for category filter chips */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
