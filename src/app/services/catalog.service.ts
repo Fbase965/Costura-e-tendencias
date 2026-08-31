@@ -415,8 +415,8 @@ export class CatalogService {
       location: 'Póvoa de Varzim',
       rating: 5,
       date: 'Há 2 semanas',
-      comment: 'Vieram a minha casa tirar as medidas, aconselharam-me o melhor tecido e fizeram a instalação completa dos cortinados de onda perfeita na sala e nos quartos. O serviço de montagem é espetacular!',
-      service: 'Cortinados de Onda Perfeita com Instalação',
+      comment: 'Vieram a minha casa tirar as medidas, aconselharam-me o melhor tecido e fizeram a instalação completa dos cortinados de onda perfeita na sala e nos quartos. O serviço de montagem em calha ficou impecável!',
+      service: 'Cortinados de Onda Perfeita em Calha',
       verified: true
     },
     {
@@ -435,7 +435,7 @@ export class CatalogService {
       location: 'Argivai',
       rating: 5,
       date: 'Há 1 mês',
-      comment: 'Comprei os lençóis de 100% algodão e toalhas de banho diretamente no atelier. A qualidade dos tecidos portugueses nota-se logo ao primeiro toque, super macios e resistentes às lavagens.',
+      comment: 'Comprei os lençóis de 100% algodão e as toalhas de banho diretamente no atelier. A qualidade dos tecidos portugueses nota-se logo ao primeiro toque, muito macios e resistentes às lavagens.',
       service: 'Roupa de Cama & Têxteis de Lar',
       verified: true
     },
@@ -445,8 +445,8 @@ export class CatalogService {
       location: 'Póvoa de Varzim',
       rating: 5,
       date: 'Há 2 meses',
-      comment: 'Cliente habitual! Já me montaram as calhas e cortinados e também fizeram toalhas de mesa por medida para a sala de jantar. Profissionalismo de excelência, pontuais e muito asseados durante a montagem.',
-      service: 'Montagem de Calhas & Toalhas de Mesa',
+      comment: 'Cliente habitual! Já me montaram as calhas de teto e cortinados e também fizeram toalhas de mesa por medida para a sala de jantar. Profissionalismo exemplar, pontuais e muito asseados durante a montagem.',
+      service: 'Montagem de Calhas de Teto & Toalhas de Mesa',
       verified: true
     }
   ];
@@ -454,11 +454,15 @@ export class CatalogService {
   readonly faqs = [
     {
       question: 'Como funciona o serviço de Medição & Instalação em casa?',
-      answer: 'Para sua total comodidade, deslocamo-nos ao seu domicílio para tirar as medidas exatas, levar as amostras de tecidos da nossa coleção e, após a confecção no atelier, realizamos a montagem completa de calhas, varões e cortinados (serviço de montagem/deslocação orçamentado sob consulta de acordo com a localidade).'
+      answer: 'Para sua total comodidade, deslocamo-nos ao seu domicílio para tirar as medidas exatas, levar as amostras de tecidos da nossa coleção e, após a confeção no atelier, realizamos a montagem completa de calhas técnicas e cortinados de onda perfeita (serviço de montagem/deslocação orçamentado sob consulta de acordo com a localidade).'
     },
     {
-      question: 'Posso levar o meu próprio tecido para a confecção dos cortinados?',
-      answer: 'Não. Na Costura & Tendências não trabalhamos com tecidos trazidos de fora. Todos os tecidos são fornecidos exclusivamente pelo nosso atelier e pelos nossos fornecedores certificados de alta qualidade. Esta exigência garante o caimento perfeito, a durabilidade do tecido e o resultado impecável na montagem final.'
+      question: 'Que tipo de suporte instalam para os cortinados? Fazem instalação em varão?',
+      answer: 'No nosso atelier instalamos exclusivamente sistemas em calha técnica (de teto, parede ou calha embutida). Não trabalhamos com instalação de varões, uma vez que as calhas técnicas são o único sistema que garante o efeito de onda perfeita contínua, o deslizamento suave e o caimento sofisticado que distinguem o nosso trabalho.'
+    },
+    {
+      question: 'Posso levar o meu próprio tecido para a confeção dos cortinados?',
+      answer: 'Não. Na Costura & Tendências não trabalhamos com tecidos trazidos de fora. Todos os tecidos são fornecidos exclusivamente pelo nosso atelier e pelos nossos parceiros têxteis de alta qualidade. Esta exigência garante o caimento perfeito, a durabilidade do tecido e o resultado impecável na montagem final.'
     },
     {
       question: 'Fazem envios por correio ou transportadora?',
@@ -466,7 +470,7 @@ export class CatalogService {
     },
     {
       question: 'Como posso pedir um orçamento para a minha casa?',
-      answer: 'É muito simples! Pode contactar-nos diretamente pelo WhatsApp (+351 919 943 031) ou por chamada telefónica. Basta indicar a sua localidade e o tipo de trabalho pretendido (cortinados sob medida, roupa de cama, toalhas) e agendamos a visita ou apresentamos a proposta.'
+      answer: 'É muito simples! Pode contactar-nos diretamente pelo WhatsApp (+351 919 943 031) ou por chamada telefónica. Basta indicar a sua localidade e o tipo de trabalho pretendido (cortinados em calha, estores, roupa de cama, toalhas de mesa) e agendamos a visita ou apresentamos a proposta.'
     },
     {
       question: 'Quais são as formas de pagamento disponíveis?',

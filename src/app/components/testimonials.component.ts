@@ -18,8 +18,8 @@ import { CatalogService } from '../services/catalog.service';
           <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             A Opinião de Quem Confia em Nós
           </h2>
-          <p class="text-base text-slate-600 mt-2">
-            A satisfação dos nossos clientes na Póvoa de Varzim e em todo o país é o nosso maior orgulho.
+          <p class="text-sm sm:text-base text-slate-600 mt-2">
+            A satisfação dos nossos clientes na Póvoa de Varzim, Vila do Conde e em todo o Grande Porto é o nosso maior orgulho.
           </p>
         </div>
 

@@ -29,7 +29,7 @@ import { CatalogService } from '../services/catalog.service';
 
             <!-- Descriptive Subtitle -->
             <p class="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed font-normal">
-              Confeção de cortinados sob medida com <strong>instalação na sua casa</strong>, estores de rolo, roupa de cama em 100% algodão português e atoalhados de mesa com acabamento artesanal de excelência.
+              Confeção de cortinados de onda perfeita em <strong>calha técnica com instalação na sua casa</strong>, estores de rolo, roupa de cama em 100% algodão português e atoalhados de mesa com acabamento artesanal de excelência.
             </p>
 
             <!-- Action Buttons -->
