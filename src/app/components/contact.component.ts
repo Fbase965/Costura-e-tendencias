@@ -115,8 +115,8 @@ import { CatalogService } from '../services/catalog.service';
           <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xs space-y-5">
             
             <div>
-              <h3 class="font-extrabold text-xl text-slate-950">Envie-nos uma Mensagem ou Pedido de Medição</h3>
-              <p class="text-xs text-slate-500 mt-1">Preencha o formulário abaixo e entraremos em contacto consigo pelo WhatsApp ou telefone para agendamento.</p>
+              <h3 class="font-extrabold text-xl text-slate-950">Fale Connosco</h3>
+              <p class="text-xs text-slate-500 mt-1">Preencha os seus dados e responderemos com toda a comodidade pelo WhatsApp ou telefone para tirar dúvidas ou agendar uma medição.</p>
             </div>
 
             @if (formSent()) {
@@ -203,7 +203,7 @@ import { CatalogService } from '../services/catalog.service';
                   type="submit" 
                   class="w-full bg-slate-950 hover:bg-slate-800 text-white py-4 px-6 rounded-xl font-bold text-xs sm:text-sm shadow-md transition-all cursor-pointer active:scale-98"
                 >
-                  Enviar Pedido de Informação / Agendamento
+                  Enviar Mensagem
                 </button>
               </form>
             }
