@@ -411,42 +411,46 @@ export class CatalogService {
   readonly testimonials: Testimonial[] = [
     {
       id: 't1',
-      name: 'Maria João Pinho',
+      name: 'Liliana Oliveira',
       location: 'Póvoa de Varzim',
       rating: 5,
-      date: 'Há 2 semanas',
-      comment: 'Vieram a minha casa tirar as medidas, aconselharam-me o melhor tecido e fizeram a instalação completa dos cortinados de onda perfeita na sala e nos quartos. O serviço de montagem em calha ficou impecável!',
+      date: 'Publicação no Facebook',
+      comment: 'Foi um prazer enorme receber este trabalho tão especial no nosso espaço e ver tudo pensado ao pormenor para proporcionar ainda mais conforto e elegância. ❤️',
       service: 'Cortinados de Onda Perfeita em Calha',
+      avatar: 'assets/avatar-liliana-oliveira.jpg',
       verified: true
     },
     {
       id: 't2',
-      name: 'Rui Moreira',
-      location: 'Vila do Conde',
+      name: 'Liliana Pinheiro',
+      location: 'Póvoa de Varzim',
       rating: 5,
-      date: 'Há 3 semanas',
-      comment: 'Fizeram a instalação dos estores de rolo e cortinados na sala. Ficaram impecáveis e o corte é de uma precisão incrível. Recomendo vivamente o atelier de Argivai!',
-      service: 'Estores de Rolo & Cortinados de Sala',
+      date: 'Publicação no Facebook',
+      comment: 'Mãos de fada 🥰 mais uma vez um excelente trabalho, muito obrigada! 🫶🥰',
+      service: 'Confeção & Instalação de Cortinados',
+      avatar: 'assets/avatar-liliana-pinheiro.jpg',
       verified: true
     },
     {
       id: 't3',
-      name: 'Ana Filipa Santos',
+      name: 'Bruna Martins',
       location: 'Argivai',
       rating: 5,
-      date: 'Há 1 mês',
-      comment: 'Comprei os lençóis de 100% algodão e as toalhas de banho diretamente no atelier. A qualidade dos tecidos portugueses nota-se logo ao primeiro toque, muito macios e resistentes às lavagens.',
-      service: 'Roupa de Cama & Têxteis de Lar',
+      date: 'Publicação no Facebook',
+      comment: 'Trabalho excecional, qualidade top! ❤️ Super recomendo o atelier.',
+      service: 'Têxteis-Lar & Confeção por Medida',
+      avatar: 'assets/avatar-bruna-martins.jpg',
       verified: true
     },
     {
       id: 't4',
-      name: 'Teresa Ramos',
+      name: 'Mary Lima',
       location: 'Póvoa de Varzim',
       rating: 5,
-      date: 'Há 2 meses',
-      comment: 'Cliente habitual! Já me montaram as calhas de teto e cortinados e também fizeram toalhas de mesa por medida para a sala de jantar. Profissionalismo exemplar, pontuais e muito asseados durante a montagem.',
-      service: 'Montagem de Calhas de Teto & Toalhas de Mesa',
+      date: 'Publicação no Facebook',
+      comment: 'Super profissionais e simpáticos. Muito obrigada pelo profissionalismo, ficou tudo impecável! ❤️',
+      service: 'Medição & Instalação no Lar',
+      avatar: 'assets/avatar-mary-lima.jpg',
       verified: true
     }
   ];

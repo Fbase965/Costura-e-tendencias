@@ -75,4 +75,5 @@ export interface Testimonial {
   comment: string;
   service: string;
   verified: boolean;
+  avatar?: string;
 }
