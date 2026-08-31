@@ -52,18 +52,15 @@ import { CatalogService } from '../services/catalog.service';
                 </p>
               </div>
 
-              <!-- Author Info with Real Avatar -->
-              <div class="pt-3 border-t border-slate-100 flex items-center gap-3">
-                <img 
-                  [src]="t.avatar" 
-                  [alt]="t.name" 
-                  class="w-10 h-10 rounded-full object-cover border border-slate-200 shadow-2xs shrink-0"
-                />
-                
+              <!-- Author Info (Text only, no photo) -->
+              <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
                 <div class="leading-tight">
                   <h4 class="font-extrabold text-xs text-slate-900">{{ t.name }}</h4>
-                  <p class="text-[10px] text-slate-400">{{ t.location }} • {{ t.service }}</p>
+                  <p class="text-[10px] text-slate-400 mt-0.5">{{ t.location }} • {{ t.service }}</p>
                 </div>
+                <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
+                  ✓ Verificado
+                </span>
               </div>
 
             </div>
