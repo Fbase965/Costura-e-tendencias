@@ -1,0 +1,7 @@
+# Costura & Tendências - Atelier Têxtil
+# https://costura-e-tendencias.vercel.app
+
+User-agent: *
+Allow: /
+
+Sitemap: https://costura-e-tendencias.vercel.app/sitemap.xml
