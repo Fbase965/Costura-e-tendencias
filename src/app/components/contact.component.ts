@@ -20,7 +20,7 @@ import { CatalogService } from '../services/catalog.service';
             Visite o Atelier ou Fale Connosco
           </h2>
           <p class="text-sm sm:text-base text-[#57534E] mt-3 max-w-xl mx-auto font-sans">
-            Estamos localizados em Argivai, na Póvoa de Varzim. Teremos todo o gosto em recebê-lo(a) ou agendar uma visita de medição em sua casa.
+            Estamos localizados em Argivai, na Póvoa de Varzim. Teremos todo o gosto em recebê-lo(a) ou agendar uma visita de medição ou limpeza em sua casa.
           </p>
         </div>
 
@@ -163,7 +163,7 @@ import { CatalogService } from '../services/catalog.service';
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div class="space-y-1.5">
-                    <label class="text-xs font-bold text-[#1C1917]">Localidade (para medição)</label>
+                    <label class="text-xs font-bold text-[#1C1917]">Localidade (para medição ou limpeza)</label>
                     <input 
                       type="text" 
                       name="location" 
@@ -184,6 +184,7 @@ import { CatalogService } from '../services/catalog.service';
                       <option value="Estores de Rolo & Blackout">Estores de Rolo / Blackout</option>
                       <option value="Roupa de Cama 100% Algodão">Roupa de Cama 100% Algodão</option>
                       <option value="Toalhas de Mesa por Medida">Toalhas de Mesa por Medida</option>
+                      <option value="Limpeza ao Domicílio">Limpeza de Sofás, Tapetes, Colchões ou Cortinas</option>
                       <option value="Outro Artigo ou Dúvida">Outro Assunto / Dúvida</option>
                     </select>
                   </div>

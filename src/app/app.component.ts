@@ -4,6 +4,7 @@ import { NavbarComponent } from './components/navbar.component';
 import { HeroComponent } from './components/hero.component';
 import { TrustBadgesComponent } from './components/trust-badges.component';
 import { ServicesComponent } from './components/services.component';
+import { CleaningComponent } from './components/cleaning.component';
 import { WhyUsComponent } from './components/why-us.component';
 import { TestimonialsComponent } from './components/testimonials.component';
 import { FaqComponent } from './components/faq.component';
@@ -20,6 +21,7 @@ import { FloatingWhatsappComponent } from './components/floating-whatsapp.compon
     HeroComponent,
     TrustBadgesComponent,
     ServicesComponent,
+    CleaningComponent,
     WhyUsComponent,
     TestimonialsComponent,
     FaqComponent,
@@ -37,6 +39,7 @@ import { FloatingWhatsappComponent } from './components/floating-whatsapp.compon
         <app-hero></app-hero>
         <app-trust-badges></app-trust-badges>
         <app-services></app-services>
+        <app-cleaning></app-cleaning>
         <app-why-us></app-why-us>
         <app-testimonials></app-testimonials>
         <app-faq></app-faq>

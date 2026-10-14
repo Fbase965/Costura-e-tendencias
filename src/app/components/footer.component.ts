@@ -25,7 +25,7 @@ import { CatalogService } from '../services/catalog.service';
             </div>
 
             <p class="text-[#A8A196] leading-relaxed text-xs max-w-sm font-sans">
-              Especialistas em cortinados de onda perfeita com serviço de medição e instalação de calhas ao domicílio, roupa de cama em 100% algodão português, estores de rolo e toalhas de mesa confeccionadas por medida em Argivai, Póvoa de Varzim.
+              Especialistas em cortinados de onda perfeita com serviço de medição e instalação de calhas ao domicílio, roupa de cama em 100% algodão português, estores de rolo, toalhas de mesa confeccionadas por medida e limpeza ao domicílio de sofás, tapetes e colchões em Argivai, Póvoa de Varzim.
             </p>
 
             <div class="pt-1 flex items-center gap-3">
@@ -51,6 +51,7 @@ import { CatalogService } from '../services/catalog.service';
               <li><a href="#servicos" class="hover:text-white transition-colors">Estores de Rolo &amp; Blackout</a></li>
               <li><a href="#servicos" class="hover:text-white transition-colors">Roupa de Cama 100% Algodão</a></li>
               <li><a href="#servicos" class="hover:text-white transition-colors">Toalhas de Mesa por Medida</a></li>
+              <li><a href="#limpeza" class="hover:text-white transition-colors">Limpeza de Sofás, Tapetes e Colchões</a></li>
             </ul>
           </div>
 

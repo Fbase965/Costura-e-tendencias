@@ -33,7 +33,7 @@ import { CatalogService } from '../services/catalog.service';
 
             <!-- Descriptive Paragraph -->
             <p class="text-sm sm:text-base text-[#57534E] max-w-xl leading-relaxed font-sans font-normal">
-              Especialistas em cortinados de onda perfeita com <strong>instalação de calhas na sua casa</strong>, estores de rolo à medida, roupa de cama em 100% algodão e atoalhados de mesa com acabamento de atelier.
+              Especialistas em cortinados de onda perfeita com <strong>instalação de calhas na sua casa</strong>, estores de rolo à medida, roupa de cama em 100% algodão e atoalhados de mesa com acabamento de atelier. Agora também com <strong>limpeza de sofás, tapetes, colchões e cortinados ao domicílio</strong>.
             </p>
 
             <!-- Action Buttons -->
