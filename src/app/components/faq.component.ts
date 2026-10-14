@@ -12,7 +12,7 @@ import { CatalogService } from '../services/catalog.service';
         
         <!-- Header with Serif Elegance -->
         <div class="text-center mb-14 sm:mb-16">
-          <span class="text-[11px] font-sans font-bold text-[#78716C] uppercase tracking-[0.25em] block mb-2">
+          <span class="text-xs font-sans font-bold text-[#78716C] uppercase tracking-[0.25em] block mb-2">
             Esclarecimentos
           </span>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1C1917] tracking-tight">
@@ -38,7 +38,7 @@ import { CatalogService } from '../services/catalog.service';
               </button>
 
               @if (openIndex() === idx) {
-                <div class="p-5 sm:p-6 pt-0 text-xs sm:text-sm text-[#57534E] leading-relaxed border-t border-[#EAE3D9] bg-white font-sans">
+                <div class="p-5 sm:p-6 pt-0 text-sm sm:text-base text-[#57534E] leading-relaxed border-t border-[#EAE3D9] bg-white font-sans">
                   {{ faq.answer }}
                 </div>
               }

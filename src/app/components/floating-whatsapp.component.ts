@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, afterNextRender, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CatalogService } from '../services/catalog.service';
 
@@ -14,7 +14,7 @@ import { CatalogService } from '../services/catalog.service';
         <!-- Call Direct Button -->
         <a 
           href="tel:+351919943031" 
-          class="flex items-center justify-center gap-2 bg-[#1C1917] hover:bg-[#292524] text-white py-3.5 px-3 rounded-xl font-bold text-xs shadow-md active:scale-95 transition-all text-center"
+          class="flex items-center justify-center gap-2 bg-[#1C1917] hover:bg-[#292524] text-white py-3.5 px-3 rounded-xl font-bold text-sm shadow-md active:scale-95 transition-all text-center"
           aria-label="Ligar por Telefone"
         >
           <div class="w-7 h-7 rounded-full bg-[#292524] flex items-center justify-center shrink-0">
@@ -23,8 +23,8 @@ import { CatalogService } from '../services/catalog.service';
             </svg>
           </div>
           <div class="text-left leading-tight font-sans">
-            <span class="block text-[10px] text-[#A8A196] uppercase tracking-wider font-semibold">Ligar Agora</span>
-            <span class="block text-xs font-bold text-white">919 943 031</span>
+            <span class="block text-xs text-[#A8A196] uppercase tracking-wider font-semibold">Ligar Agora</span>
+            <span class="block text-sm font-bold text-white">919 943 031</span>
           </div>
         </a>
 
@@ -33,7 +33,7 @@ import { CatalogService } from '../services/catalog.service';
           [href]="'https://wa.me/' + catalogService.PHONE_CLEAN" 
           target="_blank" 
           rel="noopener"
-          class="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3.5 px-3 rounded-xl font-bold text-xs shadow-md active:scale-95 transition-all text-center"
+          class="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white py-3.5 px-3 rounded-xl font-bold text-sm shadow-md active:scale-95 transition-all text-center"
           aria-label="Abrir conversa no WhatsApp"
         >
           <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center shrink-0">
@@ -42,8 +42,8 @@ import { CatalogService } from '../services/catalog.service';
             </svg>
           </div>
           <div class="text-left leading-tight font-sans">
-            <span class="block text-[10px] text-emerald-100 uppercase tracking-wider font-semibold">WhatsApp</span>
-            <span class="block text-xs font-bold text-white">Conversar</span>
+            <span class="block text-xs text-emerald-100 uppercase tracking-wider font-semibold">WhatsApp</span>
+            <span class="block text-sm font-bold text-white">Conversar</span>
           </div>
         </a>
 
@@ -55,7 +55,7 @@ import { CatalogService } from '../services/catalog.service';
       
       <!-- Tooltip Bubble -->
       @if (showTooltip()) {
-        <div class="bg-white p-4 rounded-2xl shadow-xl border border-[#EAE3D9] text-xs text-[#292524] max-w-[240px] relative font-sans">
+        <div class="bg-white p-4 rounded-2xl shadow-xl border border-[#EAE3D9] text-sm text-[#292524] max-w-[240px] relative font-sans">
           <button (click)="showTooltip.set(false)" class="absolute top-2 right-2 text-[#A8A196] hover:text-[#1C1917] cursor-pointer" aria-label="Fechar">
             <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -64,10 +64,10 @@ import { CatalogService } from '../services/catalog.service';
           
           <div class="flex items-center gap-1.5 mb-1">
             <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-            <span class="font-bold text-[11px] text-[#1C1917]">Atelier em Argivai</span>
+            <span class="font-bold text-xs text-[#1C1917]">Atelier em Argivai</span>
           </div>
-          <p class="text-[11px] text-[#78716C] leading-snug">
-            Tire dúvidas sobre tecidos ou agende uma visita no domicílio com toda a tranquilidade.
+          <p class="text-xs text-[#78716C] leading-snug">
+            Tire dúvidas ou peça orçamento para cortinados ou limpeza ao domicílio, sem compromisso.
           </p>
         </div>
       }
@@ -90,5 +90,10 @@ import { CatalogService } from '../services/catalog.service';
 })
 export class FloatingWhatsappComponent {
   catalogService = inject(CatalogService);
-  showTooltip = signal(true);
+  showTooltip = signal(false);
+
+  constructor() {
+    // Só no browser (não na pré-renderização): mostra o balão depois de o visitante ter tempo de ver a página
+    afterNextRender(() => setTimeout(() => this.showTooltip.set(true), 12000));
+  }
 }

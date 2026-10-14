@@ -7,7 +7,7 @@ import { CatalogService } from '../services/catalog.service';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <footer class="bg-[#181614] text-[#A8A196] text-xs pt-20 pb-14 border-t border-[#292524]">
+    <footer class="bg-[#181614] text-[#A8A196] text-sm pt-20 pb-14 border-t border-[#292524]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
@@ -16,15 +16,15 @@ import { CatalogService } from '../services/catalog.service';
           <div class="lg:col-span-5 space-y-5">
             <div class="flex items-center gap-3.5">
               <div class="w-12 h-12 rounded-full overflow-hidden border border-[#44403C] bg-white p-0.5 shrink-0 flex items-center justify-center">
-                <img src="assets/logo.png" alt="Costura & Tendências" class="w-full h-full object-contain" />
+                <img width="48" height="48" loading="lazy" decoding="async" src="assets/logo-112.webp" alt="Costura & Tendências" class="w-full h-full object-contain" />
               </div>
               <div>
                 <span class="font-serif font-bold text-xl text-[#FAF8F5] tracking-tight">Costura &amp; Tendências</span>
-                <p class="text-[10px] text-[#A8A196] uppercase tracking-[0.2em] font-sans font-semibold">Atelier Têxtil • Argivai</p>
+                <p class="text-xs text-[#A8A196] uppercase tracking-[0.2em] font-sans font-semibold">Atelier Têxtil • Argivai</p>
               </div>
             </div>
 
-            <p class="text-[#A8A196] leading-relaxed text-xs max-w-sm font-sans">
+            <p class="text-[#A8A196] leading-relaxed text-sm max-w-sm font-sans">
               Especialistas em cortinados de onda perfeita com serviço de medição e instalação de calhas ao domicílio, roupa de cama em 100% algodão português, estores de rolo, toalhas de mesa confeccionadas por medida e limpeza ao domicílio de sofás, tapetes e colchões em Argivai, Póvoa de Varzim.
             </p>
 
@@ -33,6 +33,10 @@ import { CatalogService } from '../services/catalog.service';
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                 </svg>
+              </a>
+
+              <a [href]="catalogService.INSTAGRAM_URL" target="_blank" rel="noopener" aria-label="Instagram" class="w-9 h-9 rounded-xl bg-[#292524] hover:bg-pink-600 text-white flex items-center justify-center transition-colors">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg>
               </a>
 
               <a [href]="'https://wa.me/' + catalogService.PHONE_CLEAN" target="_blank" rel="noopener" class="w-9 h-9 rounded-xl bg-[#292524] hover:bg-emerald-600 text-white flex items-center justify-center transition-colors">
@@ -45,7 +49,7 @@ import { CatalogService } from '../services/catalog.service';
 
           <!-- Column 2: Especialidades -->
           <div class="lg:col-span-3 space-y-3">
-            <h4 class="font-sans font-bold text-[#FAF8F5] uppercase text-[11px] tracking-widest">Especialidades</h4>
+            <h4 class="font-sans font-bold text-[#FAF8F5] uppercase text-xs tracking-widest">Especialidades</h4>
             <ul class="space-y-2.5 font-sans">
               <li><a href="#servicos" class="hover:text-white transition-colors">Cortinados de Onda em Calha</a></li>
               <li><a href="#servicos" class="hover:text-white transition-colors">Estores de Rolo &amp; Blackout</a></li>
@@ -57,7 +61,7 @@ import { CatalogService } from '../services/catalog.service';
 
           <!-- Column 3: Contactos Rápidos -->
           <div class="lg:col-span-4 space-y-3">
-            <h4 class="font-sans font-bold text-[#FAF8F5] uppercase text-[11px] tracking-widest">Atelier &amp; Contactos</h4>
+            <h4 class="font-sans font-bold text-[#FAF8F5] uppercase text-xs tracking-widest">Atelier &amp; Contactos</h4>
             <ul class="space-y-3 font-sans">
               <li class="flex items-center gap-2.5">
                 <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -67,9 +71,9 @@ import { CatalogService } from '../services/catalog.service';
               </li>
               <li class="flex items-start gap-2.5">
                 <span class="text-sm shrink-0">📍</span>
-                <span>Rua de Argivai, Póvoa de Varzim, Portugal</span>
+                <span>Argivai, Póvoa de Varzim, Portugal</span>
               </li>
-              <li class="text-[11px] text-[#78716C] pt-1">
+              <li class="text-xs text-[#78716C] pt-1">
                 Segunda a Sexta: 09:00 - 19:00<br>Sábado: 09:30 - 13:00
               </li>
             </ul>
@@ -77,7 +81,7 @@ import { CatalogService } from '../services/catalog.service';
 
         </div>
 
-        <div class="pt-8 border-t border-[#292524] flex flex-col sm:flex-row items-center justify-between gap-4 text-[#78716C] text-[11px] font-sans">
+        <div class="pt-8 border-t border-[#292524] flex flex-col sm:flex-row items-center justify-between gap-4 text-[#78716C] text-xs font-sans">
           <p>© {{ currentYear }} Costura &amp; Tendências. Confeção de Têxteis-Lar. Feito em Portugal.</p>
           <div class="flex items-center gap-4">
             <span class="text-[#A8A196]">Argivai • Póvoa de Varzim</span>
