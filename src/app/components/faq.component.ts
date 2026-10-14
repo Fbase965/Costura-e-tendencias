@@ -19,7 +19,7 @@ import { CatalogService } from '../services/catalog.service';
             Perguntas Frequentes
           </h2>
           <p class="text-sm sm:text-base text-[#57534E] mt-3 font-sans max-w-lg mx-auto">
-            Tudo o que precisa de saber sobre o serviço de medição, confeção de cortinados em calha e encomendas.
+            Tudo o que precisa de saber sobre o serviço de medição, confeção de cortinados em calha, limpeza ao domicílio e encomendas.
           </p>
         </div>
 

@@ -14,8 +14,8 @@ import { CatalogService } from '../services/catalog.service';
           <span class="inline-flex items-center gap-1.5 bg-[#292524] border border-[#44403C] px-2.5 py-0.5 rounded-full text-[10px] text-[#E7DFD5] uppercase tracking-widest font-sans">
             Atelier em Argivai
           </span>
-          <span class="hidden md:inline text-[#A8A196]">Confeção por medida e instalação de cortinados no domicílio • Póvoa de Varzim</span>
-          <span class="md:hidden text-[#A8A196]">Confeção &amp; Instalação no Domicílio</span>
+          <span class="hidden md:inline text-[#A8A196]">Cortinados por medida e limpeza de sofás, tapetes e colchões ao domicílio • Póvoa de Varzim</span>
+          <span class="md:hidden text-[#A8A196]">Cortinados &amp; Limpeza ao Domicílio</span>
         </div>
         
         <div class="flex items-center gap-4 text-[#D6CEC3] text-[11px]">
@@ -61,6 +61,9 @@ import { CatalogService } from '../services/catalog.service';
             <a href="#servicos" class="px-4 py-2 rounded-full text-xs font-bold text-[#57534E] hover:text-[#1C1917] hover:bg-white hover:shadow-2xs transition-all whitespace-nowrap">
               Serviços
             </a>
+            <a href="#limpeza" class="px-4 py-2 rounded-full text-xs font-bold text-[#57534E] hover:text-[#1C1917] hover:bg-white hover:shadow-2xs transition-all whitespace-nowrap">
+              Limpeza
+            </a>
             <a href="#atelier" class="px-4 py-2 rounded-full text-xs font-bold text-[#57534E] hover:text-[#1C1917] hover:bg-white hover:shadow-2xs transition-all whitespace-nowrap">
               O Atelier
             </a>
@@ -105,6 +108,7 @@ import { CatalogService } from '../services/catalog.service';
       <!-- Mobile Dropdown Menu -->
       <div *ngIf="mobileMenuOpen()" class="lg:hidden bg-[#FAF8F5] border-b border-[#EAE3D9] px-4 pt-2 pb-6 space-y-2 shadow-lg">
         <a (click)="mobileMenuOpen.set(false)" href="#servicos" class="block py-2.5 px-3 rounded-lg font-bold text-xs text-[#1C1917] hover:bg-[#F5EFEB]">Serviços</a>
+        <a (click)="mobileMenuOpen.set(false)" href="#limpeza" class="block py-2.5 px-3 rounded-lg font-bold text-xs text-[#1C1917] hover:bg-[#F5EFEB]">Limpeza ao Domicílio</a>
         <a (click)="mobileMenuOpen.set(false)" href="#atelier" class="block py-2.5 px-3 rounded-lg font-bold text-xs text-[#1C1917] hover:bg-[#F5EFEB]">O Atelier em Argivai</a>
         <a (click)="mobileMenuOpen.set(false)" href="#testemunhos" class="block py-2.5 px-3 rounded-lg font-bold text-xs text-[#1C1917] hover:bg-[#F5EFEB]">Testemunhos de Clientes</a>
         <a (click)="mobileMenuOpen.set(false)" href="#faq" class="block py-2.5 px-3 rounded-lg font-bold text-xs text-[#1C1917] hover:bg-[#F5EFEB]">Perguntas Frequentes</a>
