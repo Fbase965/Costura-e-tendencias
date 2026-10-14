@@ -8,6 +8,7 @@ export class CatalogService {
   readonly PHONE_NUMBER = '+351 919 943 031';
   readonly PHONE_CLEAN = '351919943031';
   readonly FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=100067887818173';
+  readonly INSTAGRAM_URL = 'https://www.instagram.com/costuratendencias/';
   readonly LOCATION = 'Argivai, Póvoa de Varzim, Portugal';
 
   // Signals for state management

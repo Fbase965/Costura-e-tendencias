@@ -5,6 +5,7 @@ import { HeroComponent } from './components/hero.component';
 import { TrustBadgesComponent } from './components/trust-badges.component';
 import { ServicesComponent } from './components/services.component';
 import { CleaningComponent } from './components/cleaning.component';
+import { GalleryComponent } from './components/gallery.component';
 import { WhyUsComponent } from './components/why-us.component';
 import { TestimonialsComponent } from './components/testimonials.component';
 import { FaqComponent } from './components/faq.component';
@@ -22,6 +23,7 @@ import { FloatingWhatsappComponent } from './components/floating-whatsapp.compon
     TrustBadgesComponent,
     ServicesComponent,
     CleaningComponent,
+    GalleryComponent,
     WhyUsComponent,
     TestimonialsComponent,
     FaqComponent,
@@ -39,6 +41,7 @@ import { FloatingWhatsappComponent } from './components/floating-whatsapp.compon
         <app-hero></app-hero>
         <app-trust-badges></app-trust-badges>
         <app-services></app-services>
+        <app-gallery></app-gallery>
         <app-cleaning></app-cleaning>
         <app-why-us></app-why-us>
         <app-testimonials></app-testimonials>
