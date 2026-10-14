@@ -18,7 +18,7 @@ import { Photo, PhotoGridComponent } from './photo-grid.component';
             Novo Serviço
           </span>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1C1917] tracking-tight">
-            Limpeza de Sofás, Tapetes e Colchões ao Domicílio
+            Limpeza de Sofás, Tapetes, Colchões e Cortinados ao Domicílio
           </h2>
           <p class="text-sm sm:text-base text-[#57534E] mt-3 max-w-2xl mx-auto font-sans leading-relaxed">
             Limpeza e higienização profissional de sofás, estofos, tapetes, carpetes, alcatifas, colchões, cortinados e cadeiras, <strong>sem sair de casa</strong>. Deslocamo-nos a sua casa na Póvoa de Varzim, Vila do Conde e arredores, avaliamos as peças e apresentamos orçamento sem compromisso.
@@ -141,8 +141,8 @@ export class CleaningComponent {
     },
     {
       title: 'Limpeza de Cortinas e Cortinados',
-      description: 'Limpeza de cortinas e cortinados sem complicações, incluindo tecidos blackout e voiles transparentes, com opção de impermeabilização.',
-      points: ['Por painel ou por metro linear', 'Blackout, voile e transparentes', 'Impermeabilização de tecidos']
+      description: 'Limpeza de cortinados ao domicílio, incluindo tecidos blackout e voiles transparentes.',
+      points: ['Blackout, voile e transparentes', 'Orçamento sem compromisso']
     },
     {
       title: 'Limpeza de Cadeiras e Cadeirões',
