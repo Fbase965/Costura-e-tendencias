@@ -8,6 +8,7 @@ export class CatalogService {
   readonly PHONE_NUMBER = '+351 919 943 031';
   readonly PHONE_CLEAN = '351919943031';
   readonly FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=100067887818173';
+  readonly INSTAGRAM_URL = 'https://www.instagram.com/costuratendencias/';
   readonly LOCATION = 'Argivai, Póvoa de Varzim, Portugal';
 
   // Signals for state management
@@ -469,12 +470,20 @@ export class CatalogService {
       answer: 'Não. Na Costura & Tendências não trabalhamos com tecidos trazidos de fora. Todos os tecidos são fornecidos exclusivamente pelo nosso atelier e pelos nossos parceiros têxteis de alta qualidade. Esta exigência garante o caimento perfeito, a durabilidade do tecido e o resultado impecável na montagem final.'
     },
     {
+      question: 'Fazem limpeza de sofás, tapetes e colchões ao domicílio?',
+      answer: 'Sim. Deslocamo-nos a sua casa para limpar e higienizar sofás, estofos, cadeiras, colchões, cortinados, tapetes, carpetes e alcatifas. Avaliamos as peças no local e apresentamos um orçamento sem compromisso. Atendemos na Póvoa de Varzim, Vila do Conde e arredores.'
+    },
+    {
+      question: 'Os produtos de limpeza danificam os tecidos?',
+      answer: 'Não. Utilizamos produtos profissionais de alta eficácia, adequados a cada tipo de tecido, para limpar e higienizar sofás, tapetes e colchões sem danificar as fibras.'
+    },
+    {
       question: 'Fazem envios por correio ou transportadora?',
       answer: 'Não fazemos envios por correio. O nosso serviço foca-se na máxima qualidade e proximidade: instalamos diretamente na sua residência ou o cliente pode efetuar o levantamento gratuito das suas encomendas diretamente no nosso atelier em Argivai, Póvoa de Varzim.'
     },
     {
       question: 'Como posso pedir um orçamento para a minha casa?',
-      answer: 'É muito simples! Pode contactar-nos diretamente pelo WhatsApp (+351 919 943 031) ou por chamada telefónica. Basta indicar a sua localidade e o tipo de trabalho pretendido (cortinados em calha, estores, roupa de cama, toalhas de mesa) e agendamos a visita ou apresentamos a proposta.'
+      answer: 'É muito simples! Pode contactar-nos diretamente pelo WhatsApp (+351 919 943 031) ou por chamada telefónica. Basta indicar a sua localidade e o tipo de trabalho pretendido (cortinados em calha, estores, roupa de cama, toalhas de mesa ou limpeza de sofás, tapetes e colchões) e agendamos a visita ou apresentamos a proposta.'
     },
     {
       question: 'Quais são as formas de pagamento disponíveis?',

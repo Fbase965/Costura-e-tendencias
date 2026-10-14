@@ -17,19 +17,19 @@ import { CommonModule } from '@angular/common';
               <div class="grid grid-cols-2 gap-3 sm:gap-4">
                 <div class="space-y-3 sm:space-y-4">
                   <div class="rounded-2xl overflow-hidden shadow-xs bg-[#F5EFEB] h-44 sm:h-56">
-                    <img src="assets/service-cortinados.jpg" alt="Instalação de cortinados em calha" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                    <img width="1024" height="768" loading="lazy" decoding="async" src="assets/service-cortinados.webp" alt="Instalação de cortinados em calha" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                   </div>
                   <div class="rounded-2xl overflow-hidden shadow-xs bg-[#F5EFEB] h-32 sm:h-44">
-                    <img src="assets/service-mesa.jpg" alt="Toalha de mesa confecionada" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                    <img width="768" height="1024" loading="lazy" decoding="async" src="assets/service-mesa.webp" alt="Toalha de mesa confecionada" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                   </div>
                 </div>
 
                 <div class="space-y-3 sm:space-y-4 pt-4 sm:pt-6">
                   <div class="rounded-2xl overflow-hidden shadow-xs bg-[#F5EFEB] h-32 sm:h-44">
-                    <img src="assets/service-estores.jpg" alt="Estore de rolo em janela" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                    <img width="1024" height="768" loading="lazy" decoding="async" src="assets/service-estores.webp" alt="Estore de rolo em janela" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                   </div>
                   <div class="rounded-2xl overflow-hidden shadow-xs bg-[#F5EFEB] h-44 sm:h-56">
-                    <img src="assets/service-cama.jpg" alt="Roupa de cama 100% algodão" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                    <img width="990" height="930" loading="lazy" decoding="async" src="assets/service-cama.webp" alt="Roupa de cama 100% algodão" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                   </div>
                 </div>
               </div>
@@ -38,7 +38,7 @@ import { CommonModule } from '@angular/common';
             <!-- Central Atelier Badge -->
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#1C1917] text-white p-5 rounded-2xl shadow-xl text-center border-4 border-white max-w-[190px]">
               <span class="block font-serif text-2xl font-bold text-amber-200">100%</span>
-              <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-[#D6CEC3]">Trabalhos Reais</span>
+              <span class="text-xs font-sans font-bold uppercase tracking-widest text-[#D6CEC3]">Trabalhos Reais</span>
             </div>
           </div>
 
@@ -46,7 +46,7 @@ import { CommonModule } from '@angular/common';
           <div class="lg:col-span-6 space-y-7">
             
             <div>
-              <span class="text-[11px] font-sans font-bold text-[#78716C] uppercase tracking-[0.25em] block mb-2">
+              <span class="text-xs font-sans font-bold text-[#78716C] uppercase tracking-[0.25em] block mb-2">
                 O Processo de Confeção
               </span>
               <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#1C1917] tracking-tight leading-tight">
@@ -65,7 +65,7 @@ import { CommonModule } from '@angular/common';
                 <span class="font-serif text-xl font-bold text-[#1C1917] w-8 shrink-0">01</span>
                 <div>
                   <h4 class="text-sm sm:text-base font-bold text-[#1C1917] font-sans">Medição e Aconselhamento no seu Lar</h4>
-                  <p class="text-xs text-[#78716C] mt-1 font-sans">Deslocamo-nos a sua casa para tirar as medidas das janelas, analisar a luminosidade e apresentar as amostras de tecidos no local.</p>
+                  <p class="text-sm text-[#78716C] mt-1 font-sans">Deslocamo-nos a sua casa para tirar as medidas das janelas, analisar a luminosidade e apresentar as amostras de tecidos no local.</p>
                 </div>
               </div>
 
@@ -74,7 +74,7 @@ import { CommonModule } from '@angular/common';
                 <span class="font-serif text-xl font-bold text-[#1C1917] w-8 shrink-0">02</span>
                 <div>
                   <h4 class="text-sm sm:text-base font-bold text-[#1C1917] font-sans">Corte e Confeção Manual no Atelier</h4>
-                  <p class="text-xs text-[#78716C] mt-1 font-sans">Execução rigorosa no atelier em Argivai com costuras reforçadas, chumbo de caimento inferior e acabamento artesanal de precisão.</p>
+                  <p class="text-sm text-[#78716C] mt-1 font-sans">Execução rigorosa no atelier em Argivai com costuras reforçadas, chumbo de caimento inferior e acabamento artesanal de precisão.</p>
                 </div>
               </div>
 
@@ -83,7 +83,7 @@ import { CommonModule } from '@angular/common';
                 <span class="font-serif text-xl font-bold text-[#1C1917] w-8 shrink-0">03</span>
                 <div>
                   <h4 class="text-sm sm:text-base font-bold text-[#1C1917] font-sans">Montagem Exclusiva em Calha Chave-na-Mão</h4>
-                  <p class="text-xs text-[#78716C] mt-1 font-sans">Levamos, montamos as <strong>calhas técnicas de teto ou parede</strong> e penduramos os cortinados com efeito de onda perfeita (ou levantamento no atelier).</p>
+                  <p class="text-sm text-[#78716C] mt-1 font-sans">Levamos, montamos as <strong>calhas técnicas de teto ou parede</strong> e penduramos os cortinados com efeito de onda perfeita (ou levantamento no atelier).</p>
                 </div>
               </div>
 
