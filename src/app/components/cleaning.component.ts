@@ -141,8 +141,8 @@ export class CleaningComponent {
     },
     {
       title: 'Limpeza de Cortinas e Cortinados',
-      description: 'Limpeza de cortinas e cortinados sem complicações, incluindo tecidos blackout e voiles transparentes, com opção de impermeabilização.',
-      points: ['Por painel ou por metro linear', 'Blackout, voile e transparentes', 'Impermeabilização de tecidos']
+      description: 'Limpeza de cortinados ao domicílio, incluindo tecidos blackout e voiles transparentes.',
+      points: ['Blackout, voile e transparentes', 'Orçamento sem compromisso']
     },
     {
       title: 'Limpeza de Cadeiras e Cadeirões',
