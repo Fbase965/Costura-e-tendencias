@@ -479,7 +479,7 @@ export class CatalogService {
     },
     {
       question: 'Fazem limpeza de cortinas e cortinados?',
-      answer: 'Sim. Limpamos cortinas e cortinados de todos os tipos, incluindo tecidos blackout e voiles transparentes, com opção de impermeabilização dos tecidos. O orçamento é feito por painel ou por metro linear. Peça o seu orçamento sem compromisso pelo WhatsApp (+351 919 943 031).'
+      answer: 'Sim. Fazemos limpeza de cortinas e cortinados ao domicílio. Peça o seu orçamento sem compromisso pelo WhatsApp (+351 919 943 031).'
     },
     {
       question: 'Fazem envios por correio ou transportadora?',
