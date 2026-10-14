@@ -470,12 +470,16 @@ export class CatalogService {
       answer: 'Não. Na Costura & Tendências não trabalhamos com tecidos trazidos de fora. Todos os tecidos são fornecidos exclusivamente pelo nosso atelier e pelos nossos parceiros têxteis de alta qualidade. Esta exigência garante o caimento perfeito, a durabilidade do tecido e o resultado impecável na montagem final.'
     },
     {
-      question: 'Fazem limpeza de sofás, tapetes e colchões ao domicílio?',
+      question: 'Fazem limpeza de sofás, tapetes, colchões e cortinados ao domicílio?',
       answer: 'Sim. Deslocamo-nos a sua casa para limpar e higienizar sofás, estofos, cadeiras, colchões, cortinados, tapetes, carpetes e alcatifas. Avaliamos as peças no local e apresentamos um orçamento sem compromisso. Atendemos na Póvoa de Varzim, Vila do Conde e arredores.'
     },
     {
       question: 'Os produtos de limpeza danificam os tecidos?',
-      answer: 'Não. Utilizamos produtos profissionais de alta eficácia, adequados a cada tipo de tecido, para limpar e higienizar sofás, tapetes e colchões sem danificar as fibras.'
+      answer: 'Não. Utilizamos produtos profissionais de alta eficácia, adequados a cada tipo de tecido, para limpar e higienizar sofás, tapetes, colchões e cortinados sem danificar as fibras.'
+    },
+    {
+      question: 'Fazem limpeza de cortinas e cortinados?',
+      answer: 'Sim. Limpamos cortinas e cortinados de todos os tipos, incluindo tecidos blackout e voiles transparentes, com opção de impermeabilização dos tecidos. O orçamento é feito por painel ou por metro linear. Peça o seu orçamento sem compromisso pelo WhatsApp (+351 919 943 031).'
     },
     {
       question: 'Fazem envios por correio ou transportadora?',

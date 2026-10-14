@@ -14,7 +14,7 @@ import { CatalogService } from '../services/catalog.service';
           <span class="inline-flex items-center gap-1.5 bg-[#292524] border border-[#44403C] px-2.5 py-0.5 rounded-full text-xs text-[#E7DFD5] uppercase tracking-widest font-sans whitespace-nowrap">
             Atelier em Argivai
           </span>
-          <span class="hidden xl:inline text-[#A8A196]">Cortinados por medida e limpeza de sofás, tapetes e colchões ao domicílio • Póvoa de Varzim</span>
+          <span class="hidden xl:inline text-[#A8A196]">Cortinados por medida e limpeza de sofás, tapetes, colchões e cortinados ao domicílio • Póvoa de Varzim</span>
           <span class="xl:hidden text-[#A8A196]">Cortinados &amp; Limpeza ao Domicílio</span>
         </div>
         
