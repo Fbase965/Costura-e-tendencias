@@ -18,8 +18,8 @@ import { CommonModule } from '@angular/common';
               </svg>
             </div>
             <div>
-              <h4 class="text-xs sm:text-sm font-bold text-[#1C1917] font-sans">Confeção por Medida</h4>
-              <p class="text-[11px] text-[#78716C] mt-0.5 font-sans">Corte e costura manuais no atelier.</p>
+              <h4 class="text-sm sm:text-base font-bold text-[#1C1917] font-sans">Confeção por Medida</h4>
+              <p class="text-xs text-[#78716C] mt-0.5 font-sans">Corte e costura manuais no atelier.</p>
             </div>
           </div>
 
@@ -31,8 +31,8 @@ import { CommonModule } from '@angular/common';
               </svg>
             </div>
             <div>
-              <h4 class="text-xs sm:text-sm font-bold text-[#1C1917] font-sans">Instalação no Lar</h4>
-              <p class="text-[11px] text-[#78716C] mt-0.5 font-sans">Montagem técnica de calhas no local.</p>
+              <h4 class="text-sm sm:text-base font-bold text-[#1C1917] font-sans">Instalação no Lar</h4>
+              <p class="text-xs text-[#78716C] mt-0.5 font-sans">Montagem técnica de calhas no local.</p>
             </div>
           </div>
 
@@ -44,8 +44,8 @@ import { CommonModule } from '@angular/common';
               </svg>
             </div>
             <div>
-              <h4 class="text-xs sm:text-sm font-bold text-[#1C1917] font-sans">Qualidade Certificada</h4>
-              <p class="text-[11px] text-[#78716C] mt-0.5 font-sans">Tecidos nobres de linho e puro algodão.</p>
+              <h4 class="text-sm sm:text-base font-bold text-[#1C1917] font-sans">Tecidos de Qualidade</h4>
+              <p class="text-xs text-[#78716C] mt-0.5 font-sans">Tecidos nobres de linho e puro algodão.</p>
             </div>
           </div>
 
@@ -57,8 +57,8 @@ import { CommonModule } from '@angular/common';
               </svg>
             </div>
             <div>
-              <h4 class="text-xs sm:text-sm font-bold text-[#1C1917] font-sans">Medição no Domicílio</h4>
-              <p class="text-[11px] text-[#78716C] mt-0.5 font-sans">Amostras de tecidos levadas ao seu espaço.</p>
+              <h4 class="text-sm sm:text-base font-bold text-[#1C1917] font-sans">Medição no Domicílio</h4>
+              <p class="text-xs text-[#78716C] mt-0.5 font-sans">Amostras de tecidos levadas ao seu espaço.</p>
             </div>
           </div>
 

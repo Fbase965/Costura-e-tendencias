@@ -13,14 +13,14 @@ import { CatalogService } from '../services/catalog.service';
         
         <!-- Header with Serif Elegance -->
         <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <span class="text-[11px] font-sans font-bold text-[#78716C] uppercase tracking-[0.25em] block mb-2">
+          <span class="text-xs font-sans font-bold text-[#78716C] uppercase tracking-[0.25em] block mb-2">
             Localização &amp; Atendimento
           </span>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1C1917] tracking-tight">
             Visite o Atelier ou Fale Connosco
           </h2>
           <p class="text-sm sm:text-base text-[#57534E] mt-3 max-w-xl mx-auto font-sans">
-            Estamos localizados em Argivai, na Póvoa de Varzim. Teremos todo o gosto em recebê-lo(a) ou agendar uma visita de medição em sua casa.
+            Estamos localizados em Argivai, na Póvoa de Varzim. Teremos todo o gosto em recebê-lo(a) ou agendar uma visita de medição ou limpeza em sua casa.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ import { CatalogService } from '../services/catalog.service';
                     </svg>
                   </div>
                   <div class="text-left leading-tight">
-                    <span class="text-[#A8A196] font-bold block text-[10px] uppercase tracking-wider font-sans">Chamada Telefónica</span>
+                    <span class="text-[#A8A196] font-bold block text-xs uppercase tracking-wider font-sans">Chamada Telefónica</span>
                     <span class="font-extrabold text-base text-white font-sans">+351 919 943 031</span>
                   </div>
                 </a>
@@ -63,7 +63,7 @@ import { CatalogService } from '../services/catalog.service';
                     </svg>
                   </div>
                   <div class="text-left leading-tight">
-                    <span class="text-emerald-100 font-bold block text-[10px] uppercase tracking-wider font-sans">Conversa no WhatsApp</span>
+                    <span class="text-emerald-100 font-bold block text-xs uppercase tracking-wider font-sans">Conversa no WhatsApp</span>
                     <span class="font-extrabold text-base text-white font-sans">Enviar Mensagem</span>
                   </div>
                 </a>
@@ -81,8 +81,24 @@ import { CatalogService } from '../services/catalog.service';
                     </svg>
                   </div>
                   <div class="text-left">
-                    <span class="text-blue-800 font-medium block text-[10px] font-sans">Página de Facebook</span>
-                    <span class="font-bold text-xs text-blue-950 font-sans">Costura &amp; Tendências</span>
+                    <span class="text-blue-800 font-medium block text-xs font-sans">Página de Facebook</span>
+                    <span class="font-bold text-sm text-blue-950 font-sans">Costura &amp; Tendências</span>
+                  </div>
+                </a>
+
+                <!-- Instagram Direct Tap -->
+                <a 
+                  [href]="catalogService.INSTAGRAM_URL" 
+                  target="_blank" 
+                  rel="noopener" 
+                  class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-pink-50/70 hover:bg-pink-100/70 transition-colors border border-pink-200/80"
+                >
+                  <div class="w-9 h-9 bg-gradient-to-br from-amber-400 via-pink-500 to-purple-600 text-white rounded-xl flex items-center justify-center shrink-0">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg>
+                  </div>
+                  <div class="text-left">
+                    <span class="text-pink-800 font-medium block text-xs font-sans">Instagram</span>
+                    <span class="font-bold text-sm text-pink-950 font-sans">&#64;costuratendencias</span>
                   </div>
                 </a>
               </div>
@@ -92,7 +108,7 @@ import { CatalogService } from '../services/catalog.service';
             <div class="bg-white p-7 rounded-3xl border border-[#EAE3D9] shadow-sm space-y-3 font-sans">
               <h3 class="font-serif font-bold text-xl text-[#1C1917]">Morada &amp; Horário</h3>
               
-              <div class="text-xs text-[#57534E] space-y-2.5">
+              <div class="text-sm text-[#57534E] space-y-2.5">
                 <div class="flex items-start gap-2.5">
                   <span class="text-base shrink-0">📍</span>
                   <p><strong class="text-[#1C1917]">Argivai</strong>, Póvoa de Varzim, Portugal</p>
@@ -103,7 +119,7 @@ import { CatalogService } from '../services/catalog.service';
                   <div>
                     <p class="font-bold text-[#1C1917]">Segunda a Sexta: 09:00 - 19:00</p>
                     <p>Sábado: 09:30 - 13:00</p>
-                    <p class="text-[11px] text-[#78716C] mt-0.5">Domingos e Feriados: Encerrado</p>
+                    <p class="text-xs text-[#78716C] mt-0.5">Domingos e Feriados: Encerrado</p>
                   </div>
                 </div>
 
@@ -111,6 +127,22 @@ import { CatalogService } from '../services/catalog.service';
                   <span class="text-base shrink-0">🚗</span>
                   <p>Estacionamento fácil e gratuito junto ao atelier.</p>
                 </div>
+              </div>
+
+              <!-- Mapa da zona (carrega só quando aparece no ecrã) -->
+              <div class="pt-2 space-y-2">
+                <div class="rounded-2xl overflow-hidden border border-[#EAE3D9] bg-[#F5EFEB] aspect-[4/3]">
+                  <iframe
+                    title="Mapa de Argivai, Póvoa de Varzim"
+                    src="https://www.google.com/maps?q=Argivai,+P%C3%B3voa+de+Varzim&z=14&output=embed"
+                    class="w-full h-full border-0"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Argivai%2C+P%C3%B3voa+de+Varzim" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-bold text-[#1C1917] hover:underline">
+                  Abrir no Google Maps &rarr;
+                </a>
               </div>
             </div>
 
@@ -121,7 +153,7 @@ import { CatalogService } from '../services/catalog.service';
             
             <div>
               <h3 class="font-serif font-bold text-2xl text-[#1C1917]">Fale Connosco</h3>
-              <p class="text-xs sm:text-sm text-[#78716C] mt-1 font-sans">Preencha os seus dados e entraremos em contacto consigo pelo WhatsApp ou telefone para tirar dúvidas ou agendar uma medição.</p>
+              <p class="text-sm sm:text-base text-[#78716C] mt-1 font-sans">Preencha os seus dados e carregue em continuar: abrimos o WhatsApp com a sua mensagem já escrita, só tem de a enviar.</p>
             </div>
 
             @if (formSent()) {
@@ -129,82 +161,86 @@ import { CatalogService } from '../services/catalog.service';
                 <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center mx-auto text-xl font-bold">
                   ✓
                 </div>
-                <h4 class="font-bold text-sm text-emerald-950 font-sans">Mensagem Enviada com Sucesso!</h4>
-                <p class="text-xs text-emerald-800 font-sans">Obrigado pelo seu contacto. Entraremos em contacto muito brevemente pelo WhatsApp ou chamada.</p>
+                <h4 class="font-bold text-sm text-emerald-950 font-sans">Falta só um passo: enviar no WhatsApp</h4>
+                <p class="text-sm text-emerald-800 font-sans">Abrimos o WhatsApp com a sua mensagem já escrita. Carregue em enviar para o pedido nos chegar.</p>
+                <a [href]="whatsAppUrl()" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 mt-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-5 py-3 rounded-xl text-sm font-bold transition-all">
+                  O WhatsApp não abriu? Abrir novamente
+                </a>
               </div>
             } @else {
               <form (submit)="submitForm($event)" class="space-y-4 font-sans">
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div class="space-y-1.5">
-                    <label class="text-xs font-bold text-[#1C1917]">O Seu Nome *</label>
+                    <label class="text-sm font-bold text-[#1C1917]">O Seu Nome *</label>
                     <input 
                       type="text" 
                       name="name" 
                       [(ngModel)]="formData.name" 
                       required 
                       placeholder="Ex: Maria Silva" 
-                      class="w-full px-4 py-3.5 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-xs sm:text-sm transition-all"
+                      class="w-full px-4 py-3.5 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-sm sm:text-base transition-all"
                     />
                   </div>
 
                   <div class="space-y-1.5">
-                    <label class="text-xs font-bold text-[#1C1917]">Telemóvel / WhatsApp *</label>
+                    <label class="text-sm font-bold text-[#1C1917]">Telemóvel / WhatsApp *</label>
                     <input 
                       type="tel" 
                       name="phone" 
                       [(ngModel)]="formData.phone" 
                       required 
                       placeholder="Ex: 912 345 678" 
-                      class="w-full px-4 py-3.5 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-xs sm:text-sm transition-all"
+                      class="w-full px-4 py-3.5 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-sm sm:text-base transition-all"
                     />
                   </div>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div class="space-y-1.5">
-                    <label class="text-xs font-bold text-[#1C1917]">Localidade (para medição)</label>
+                    <label class="text-sm font-bold text-[#1C1917]">Localidade (para medição ou limpeza)</label>
                     <input 
                       type="text" 
                       name="location" 
                       [(ngModel)]="formData.location" 
                       placeholder="Ex: Póvoa de Varzim, Vila do Conde, etc." 
-                      class="w-full px-4 py-3.5 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-xs sm:text-sm transition-all"
+                      class="w-full px-4 py-3.5 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-sm sm:text-base transition-all"
                     />
                   </div>
 
                   <div class="space-y-1.5">
-                    <label class="text-xs font-bold text-[#1C1917]">Artigo de Interesse</label>
+                    <label class="text-sm font-bold text-[#1C1917]">Artigo de Interesse</label>
                     <select 
                       name="interest" 
                       [(ngModel)]="formData.interest"
-                      class="w-full px-4 py-3.5 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-xs sm:text-sm transition-all"
+                      class="w-full px-4 py-3.5 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-sm sm:text-base transition-all"
                     >
                       <option value="Cortinados de Onda Perfeita em Calha">Cortinados em Calha Técnica</option>
                       <option value="Estores de Rolo & Blackout">Estores de Rolo / Blackout</option>
                       <option value="Roupa de Cama 100% Algodão">Roupa de Cama 100% Algodão</option>
                       <option value="Toalhas de Mesa por Medida">Toalhas de Mesa por Medida</option>
+                      <option value="Limpeza ao Domicílio">Limpeza de Sofás, Tapetes, Colchões ou Cortinas</option>
                       <option value="Outro Artigo ou Dúvida">Outro Assunto / Dúvida</option>
                     </select>
                   </div>
                 </div>
 
                 <div class="space-y-1.5">
-                  <label class="text-xs font-bold text-[#1C1917]">Mensagem / Detalhes (Opcional)</label>
+                  <label class="text-sm font-bold text-[#1C1917]">Mensagem / Detalhes (Opcional)</label>
                   <textarea 
                     name="message" 
                     [(ngModel)]="formData.message" 
                     rows="3" 
                     placeholder="Indique-nos se pretende agendamento de medição em sua casa ou informações sobre tecidos..." 
-                    class="w-full px-4 py-3 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-xs sm:text-sm transition-all resize-none"
+                    class="w-full px-4 py-3 rounded-xl border border-[#D6CEC3] bg-[#FAF8F5] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#1C1917] text-sm sm:text-base transition-all resize-none"
                   ></textarea>
                 </div>
 
                 <button 
                   type="submit" 
-                  class="w-full bg-[#1C1917] hover:bg-[#292524] text-white py-4 px-6 rounded-xl font-bold text-xs sm:text-sm shadow-sm transition-all cursor-pointer active:scale-98"
+                  class="w-full bg-[#1C1917] hover:bg-[#292524] text-white py-4 px-6 rounded-xl font-bold text-sm sm:text-base shadow-sm transition-all cursor-pointer active:scale-98"
                 >
-                  Enviar Mensagem
+                  Continuar no WhatsApp
                 </button>
               </form>
             }
@@ -220,6 +256,7 @@ import { CatalogService } from '../services/catalog.service';
 export class ContactComponent {
   catalogService = inject(CatalogService);
   formSent = signal(false);
+  whatsAppUrl = signal('');
 
   formData = {
     name: '',
@@ -237,6 +274,7 @@ export class ContactComponent {
     const text = `*Novo Contacto do Site*\n👤 Nome: ${this.formData.name}\n📱 Telemóvel: ${this.formData.phone}\n📍 Localidade: ${this.formData.location || 'Não especificada'}\n🪟 Interesse: ${this.formData.interest}\n💬 Mensagem: ${this.formData.message || 'Sem notas adicionais'}`;
     const url = `https://wa.me/${this.catalogService.PHONE_CLEAN}?text=${encodeURIComponent(text)}`;
     
+    this.whatsAppUrl.set(url);
     window.open(url, '_blank');
     this.formSent.set(true);
   }
