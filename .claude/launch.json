@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site-compilado",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["-e", "const h=require('http'),f=require('fs'),p=require('path');const r=p.resolve('dist/costura-tendencias/browser');const t={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.jpg':'image/jpeg','.png':'image/png','.webp':'image/webp','.ico':'image/x-icon','.xml':'application/xml','.txt':'text/plain'};h.createServer((q,s)=>{let u=decodeURIComponent(q.url.split('?')[0]);let x=p.join(r,u);if(!x.startsWith(r)||!f.existsSync(x)||f.statSync(x).isDirectory())x=p.join(r,'index.html');s.writeHead(200,{'Content-Type':t[p.extname(x)]||'application/octet-stream'});f.createReadStream(x).pipe(s)}).listen(process.env.PORT||4300)"],
+      "port": 4300
+    }
+  ]
+}

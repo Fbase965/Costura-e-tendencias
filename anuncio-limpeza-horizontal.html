@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Costura e Tendências – Panfleto Publicitário P&B</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page { size: A4 landscape; margin: 0; }
+
+    body {
+      width: 297mm;
+      height: 210mm;
+      background: #FFFFFF;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+    }
+
+    .cut-line {
+      position: absolute;
+      top: 3mm; bottom: 3mm; left: 148.5mm; width: 0;
+      border-left: 1px dashed #999; z-index: 10;
+    }
+    .cut-icon {
+      position: absolute; top: 50%; left: 148.5mm; transform: translate(-50%, -50%);
+      background: #FFFFFF; padding: 2mm 1mm; font-size: 10pt; color: #666; z-index: 11;
+    }
+
+    /* ── PANFLETO (Branco e Preto) ── */
+    .flyer {
+      width: 148.5mm;
+      height: 210mm;
+      background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #000000;
+      padding: 5mm 7mm;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    /* TOPO */
+    .top-band {
+      display: flex; align-items: center; gap: 3.5mm;
+      border-bottom: 1.5px solid #000; padding-bottom: 2.5mm; margin-bottom: 3.5mm;
+      flex-shrink: 0;
+    }
+    .top-band img { width: 14mm; height: 14mm; object-fit: contain; filter: grayscale(100%); }
+    .top-text h1 {
+      font-family: 'Playfair Display', serif; font-size: 12.5pt; font-weight: 800; color: #000; line-height: 1.1;
+    }
+    .top-text p { font-size: 7pt; color: #333; margin-top: 1mm; letter-spacing: 0.05em; font-weight: 700; }
+
+    /* HERO */
+    .hero { text-align: center; flex-shrink: 0; margin-bottom: 4mm; }
+    .hero h2 {
+      font-family: 'Playfair Display', serif; font-size: 23pt; font-weight: 800; color: #000; line-height: 1.05;
+    }
+
+    /* SERVIÇOS (MUITO MAIOR) */
+    .services-list {
+      display: flex; flex-direction: column; gap: 4.5mm; flex: 1;
+    }
+    .svc-item { display: flex; align-items: center; gap: 4.5mm; }
+    .svc-image {
+      width: 26mm; height: 26mm; border-radius: 50%; border: 2.5px solid #000; flex-shrink: 0;
+      background-size: cover; background-position: center;
+      filter: grayscale(100%) contrast(120%);
+    }
+    .svc-text { flex: 1; }
+    .svc-text h3 {
+      font-family: 'Playfair Display', serif; font-size: 16pt; font-weight: 800; color: #000; margin-bottom: 1.5mm; line-height: 1;
+    }
+    .svc-text p { font-size: 10.5pt; font-weight: 600; color: #222; line-height: 1.25; }
+
+    /* DESTAQUE */
+    .highlight {
+      border-top: 2px solid #000; border-bottom: 2px solid #000;
+      padding: 2.5mm 0; text-align: center; margin-bottom: 3.5mm; flex-shrink: 0;
+    }
+    .highlight p { font-size: 12.5pt; font-weight: 800; color: #000; letter-spacing: 0.03em; }
+    .highlight span { font-size: 10pt; font-weight: 700; color: #333; display: block; margin-top: 0.5mm; }
+
+    /* FOOTER */
+    .footer-cta {
+      background: #000; color: #FFF; padding: 4mm 6mm; border-radius: 2mm;
+      display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;
+    }
+    .cta-text h3 { font-family: 'Playfair Display', serif; font-size: 12.5pt; font-weight: 800; }
+    .phone { font-size: 19pt; font-weight: 800; line-height: 1; margin-top: 1mm; letter-spacing: 0.03em; }
+    .social { font-size: 7.5pt; margin-top: 2mm; font-weight: 600; color: #DDD; }
+    .social span { color: #FFF; }
+  </style>
+</head>
+<body>
+
+  <div class="cut-line"></div>
+  <div class="cut-icon">✂</div>
+
+  <!-- PANFLETO 1 -->
+  <div class="flyer">
+    
+    <div class="top-band">
+      <img src="public/assets/logo.png" alt="Logo" />
+      <div class="top-text">
+        <h1>COSTURA E TENDÊNCIAS</h1>
+        <p>ARTIGOS PARA O LAR &nbsp;·&nbsp; LIMPEZA PROFISSIONAL</p>
+      </div>
+    </div>
+
+    <div class="hero">
+      <h2>Limpeza Profissional<br/>de Estofos</h2>
+    </div>
+
+    <div class="services-list">
+      <div class="svc-item">
+        <div class="svc-image" style="background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=300&auto=format&fit=crop');"></div>
+        <div class="svc-text">
+          <h3>Sofás</h3>
+          <p>Remoção de nódoas e odores. Todos os tamanhos, chaises e modulares.</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-image" style="background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=300&auto=format&fit=crop');"></div>
+        <div class="svc-text">
+          <h3>Colchões</h3>
+          <p>Higienização anti-ácaros para colchões de bebé, solteiro, casal e king size.</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-image" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=300&auto=format&fit=crop');"></div>
+        <div class="svc-text">
+          <h3>Cortinas</h3>
+          <p>Painéis, cortinados e blackouts lavados no local com técnica própria.</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-image" style="background-image: url('https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=300&auto=format&fit=crop');"></div>
+        <div class="svc-text">
+          <h3>Cadeiras</h3>
+          <p>Limpeza de assentos, encostos, cadeirões e puffs para renovar a sala.</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-image" style="background-image: url('https://images.unsplash.com/photo-1534889156217-d643df14f14a?q=80&w=300&auto=format&fit=crop');"></div>
+        <div class="svc-text">
+          <h3>Carpetes e Alcatifas</h3>
+          <p>Lavagem a fundo para revitalizar e eliminar a sujidade entranhada.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <p>ATENDIMENTO AO DOMICÍLIO</p>
+      <span>Orçamentos Grátis e Sem Compromisso</span>
+    </div>
+
+    <div class="footer-cta">
+      <div class="cta-text">
+        <h3>Ligue e Agende:</h3>
+        <div class="phone">919 943 031</div>
+      </div>
+      <div class="cta-contacts" style="text-align: right;">
+        <div class="social">SIGA-NOS<br/><span>@costuratendencias</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PANFLETO 2 -->
+  <div class="flyer">
+    
+    <div class="top-band">
+      <img src="public/assets/logo.png" alt="Logo" />
+      <div class="top-text">
+        <h1>COSTURA E TENDÊNCIAS</h1>
+        <p>ARTIGOS PARA O LAR &nbsp;·&nbsp; LIMPEZA PROFISSIONAL</p>
+      </div>
+    </div>
+
+    <div class="hero">
+      <h2>Limpeza Profissional<br/>de Estofos</h2>
+    </div>
+
+    <div class="services-list">
+      <div class="svc-item">
+        <div class="svc-image" style="background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=300&auto=format&fit=crop');"></div>
+        <div class="svc-text">
+          <h3>Sofás</h3>
+          <p>Remoção de nódoas e odores. Todos os tamanhos, chaises e modulares.</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-image" style="background-image: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=300&auto=format&fit=crop');"></div>
+        <div class="svc-text">
+          <h3>Colchões</h3>
+          <p>Higienização anti-ácaros para colchões de bebé, solteiro, casal e king size.</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-image" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=300&auto=format&fit=crop');"></div>
+        <div class="svc-text">
+          <h3>Cortinas</h3>
+          <p>Painéis, cortinados e blackouts lavados no local com técnica própria.</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-image" style="background-image: url('https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=300&auto=format&fit=crop');"></div>
+        <div class="svc-text">
+          <h3>Cadeiras</h3>
+          <p>Limpeza de assentos, encostos, cadeirões e puffs para renovar a sala.</p>
+        </div>
+      </div>
+      <div class="svc-item">
+        <div class="svc-image" style="background-image: url('https://images.unsplash.com/photo-1534889156217-d643df14f14a?q=80&w=300&auto=format&fit=crop');"></div>
+        <div class="svc-text">
+          <h3>Carpetes e Alcatifas</h3>
+          <p>Lavagem a fundo para revitalizar e eliminar a sujidade entranhada.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <p>ATENDIMENTO AO DOMICÍLIO</p>
+      <span>Orçamentos Grátis e Sem Compromisso</span>
+    </div>
+
+    <div class="footer-cta">
+      <div class="cta-text">
+        <h3>Ligue e Agende:</h3>
+        <div class="phone">919 943 031</div>
+      </div>
+      <div class="cta-contacts" style="text-align: right;">
+        <div class="social">SIGA-NOS<br/><span>@costuratendencias</span></div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

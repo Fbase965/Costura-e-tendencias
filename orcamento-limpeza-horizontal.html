@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Costura e Tendências – Orçamento Limpeza (A5 Horizontal)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* Folha A4 na Horizontal (Paisagem) */
+    @page { size: A4 landscape; margin: 0; }
+
+    body {
+      width: 297mm;
+      height: 210mm;
+      background: #FAFAFA;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      display: flex;
+      flex-direction: row; /* 2 flyers lado a lado */
+      position: relative;
+    }
+
+    /* Linha de corte vertical ao centro */
+    .cut-line {
+      position: absolute;
+      top: 3mm;
+      bottom: 3mm;
+      left: 148.5mm;
+      width: 0;
+      border-left: 1px dashed #aaa;
+      z-index: 10;
+    }
+    .cut-icon {
+      position: absolute;
+      top: 50%;
+      left: 148.5mm;
+      transform: translate(-50%, -50%);
+      background: #FAFAFA;
+      padding: 2mm 1mm;
+      font-size: 10pt;
+      color: #999;
+      z-index: 11;
+      line-height: 1;
+    }
+
+    /* ── CADA ORÇAMENTO: Formato A5 (148.5mm larg × 210mm alt) ── */
+    .flyer {
+      width: 148.5mm;
+      height: 210mm;
+      background: #FAFAFA;
+      display: flex;
+      flex-direction: column;
+      padding: 6mm 8mm 5mm;
+      gap: 2.5mm;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: #292524;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    /* ── HEADER ─────────────────────────────────────── */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 4mm;
+      border-bottom: 1.5px solid #292524;
+      padding-bottom: 3mm;
+      flex-shrink: 0;
+    }
+    .header img { width: 16mm; height: 16mm; object-fit: contain; }
+    .header-text { flex: 1; }
+    .header-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 14pt; font-weight: 700;
+      color: #292524; letter-spacing: 0.03em; line-height: 1.1;
+    }
+    .header-text .subtitle {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-size: 9pt; color: #555; margin-top: 1mm;
+    }
+
+    /* ── DADOS DO CLIENTE ───────────────────────────── */
+    .client-section {
+      background: #EEEEEE;
+      border: 1px solid #D0D0D0;
+      border-radius: 2mm;
+      padding: 2mm 4mm;
+      flex-shrink: 0;
+    }
+    .client-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 7.5pt; font-weight: 700;
+      color: #292524; text-transform: uppercase;
+      letter-spacing: 0.1em; margin-bottom: 2mm;
+    }
+    .client-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm 4mm; }
+    .client-field { display: flex; align-items: baseline; gap: 1.5mm; font-size: 7.5pt; }
+    .client-field label { font-weight: 700; white-space: nowrap; min-width: 12mm; }
+    .client-field .field-line { flex: 1; border-bottom: 1px solid #999; min-width: 15mm; height: 4mm; }
+
+    /* ── GRELHA DE SERVIÇOS ─────────────────────────── */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5mm;
+      align-content: start;
+      align-items: start;
+    }
+    .services-grid .full-width { grid-column: 1 / -1; }
+
+    /* ── CATEGORIA ──────────────────────────────────── */
+    .category { align-self: start; }
+    .category-header {
+      background: #292524; color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 8pt; font-weight: 700;
+      padding: 1.5mm 3mm;
+      border-radius: 1.5mm 1.5mm 0 0;
+      letter-spacing: 0.04em;
+    }
+    .category-body {
+      background: #fff;
+      border: 1px solid #D8D8D8; border-top: none;
+      border-radius: 0 0 1.5mm 1.5mm;
+      padding: 2mm; display: flex; flex-direction: column; gap: 1.5mm;
+    }
+
+    /* ── LINHA DE SERVIÇO ───────────────────────────── */
+    .row { display: flex; align-items: center; gap: 1mm; flex-wrap: nowrap; overflow: hidden; }
+    .checkbox {
+      width: 4mm; height: 4mm; min-width: 4mm;
+      border: 1px solid #292524; border-radius: 0.5mm;
+      flex-shrink: 0; display: inline-block;
+    }
+    .qty {
+      display: flex; align-items: baseline; gap: 0.3mm;
+      font-size: 6pt; color: #555; white-space: nowrap; flex-shrink: 0;
+    }
+    .qty-line { display: inline-block; width: 6mm; border-bottom: 1px solid #999; }
+    .svc-name {
+      flex: 0 1 auto; font-size: 7.5pt; color: #292524;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .leader { flex: 1 1 auto; border-bottom: 1px dotted #999; min-width: 2mm; margin-bottom: 1px; }
+    .price { display: flex; align-items: baseline; gap: 1mm; flex-shrink: 0; }
+    .price-line { display: inline-block; width: 12mm; border-bottom: 1px solid #292524; }
+    .price-eur { font-size: 7.5pt; font-weight: 700; color: #292524; }
+
+    /* ── OBSERVAÇÕES ────────────────────────────────── */
+    .obs-section {
+      background: #EEEEEE; border: 1px solid #D0D0D0; border-radius: 1.5mm;
+      padding: 2mm 4mm; flex-shrink: 0;
+    }
+    .obs-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 7pt; font-weight: 700; color: #292524; text-transform: uppercase;
+      letter-spacing: 0.1em; margin-bottom: 2mm;
+    }
+    .obs-lines { display: flex; flex-direction: column; gap: 3mm; }
+    .obs-line { border-bottom: 1px solid #999; height: 4mm; }
+
+    /* ── TOTAL ──────────────────────────────────────── */
+    .total-row {
+      display: flex; justify-content: flex-start; align-items: baseline; gap: 2mm;
+      padding: 2mm 0; border-top: 1.5px solid #292524; flex-shrink: 0;
+    }
+    .total-label { font-family: 'Playfair Display', serif; font-size: 12pt; font-weight: 700; flex-shrink: 0; }
+    .total-line { flex: 1; border-bottom: 1.5px solid #292524; margin-bottom: 2px; }
+    .total-eur { font-size: 12pt; font-weight: 700; color: #292524; flex-shrink: 0; }
+
+    /* ── ASSINATURAS ────────────────────────────────── */
+    .sig-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; flex-shrink: 0; padding: 0 2mm; }
+    .sig-block { display: flex; flex-direction: column; align-items: center; gap: 1.5mm; }
+    .sig-space { height: 8mm; }
+    .sig-line { width: 100%; border-bottom: 1px solid #292524; }
+    .sig-label { font-size: 6pt; color: #555; letter-spacing: 0.05em; text-align: center; text-transform: uppercase; font-weight: 600; }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    .footer {
+      background: #292524; color: #FAF8F5; text-align: center;
+      padding: 2mm 4mm; border-radius: 1.5mm;
+      font-size: 6pt; letter-spacing: 0.04em; line-height: 1.6;
+      flex-shrink: 0; margin-top: auto;
+    }
+    .footer span { color: #EAE3D9; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <div class="cut-line"></div>
+  <div class="cut-icon">✂</div>
+
+  <!-- ════════════ ORÇAMENTO 1 ════════════ -->
+  <div class="flyer">
+    <div class="header">
+      <img src="public/assets/logo.png" alt="Logo" />
+      <div class="header-text">
+        <h1>COSTURA E TENDÊNCIAS</h1>
+        <div class="subtitle">Limpeza ao Domicílio — Orçamento</div>
+      </div>
+    </div>
+
+    <div class="client-section">
+      <h3>Dados do Cliente</h3>
+      <div class="client-grid">
+        <div class="client-field"><label>Nome:</label><span class="field-line"></span></div>
+        <div class="client-field"><label>Telefone:</label><span class="field-line"></span></div>
+        <div class="client-field"><label>Morada:</label><span class="field-line"></span></div>
+        <div class="client-field"><label>Data:</label><span class="field-line"></span></div>
+      </div>
+    </div>
+
+    <div class="services-grid">
+      <div class="category">
+        <div class="category-header">Sofás</div>
+        <div class="category-body">
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">1 Lugar</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">2 Lugares</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">3 Lugares</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Lugar extra</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Chaise Longue</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Canto / Modular</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+        </div>
+      </div>
+      <div class="category">
+        <div class="category-header">Cortinas</div>
+        <div class="category-body">
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Por painel</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Por metro linear</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Blackout</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Voile / Transp.</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Impermeab.</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+        </div>
+      </div>
+      <div class="category">
+        <div class="category-header">Cadeiras</div>
+        <div class="category-body">
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Somente assento</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Assento + encosto</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">+ braços</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Cadeirão</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Banco / Puff</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+        </div>
+      </div>
+      <div class="category">
+        <div class="category-header">Colchões</div>
+        <div class="category-body">
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Bebé</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Solteiro</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Individual</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Casal</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Queen / King</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+        </div>
+      </div>
+      <div class="category full-width">
+        <div class="category-header">Carpetes e Alcatifas</div>
+        <div class="category-body" style="display:grid; grid-template-columns:1fr 1fr; gap:1mm 4mm;">
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Preço por m²</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Tapete pequeno</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Tapete grande</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="obs-section">
+      <h3>Observações</h3>
+      <div class="obs-lines">
+        <div class="obs-line"></div>
+        <div class="obs-line"></div>
+      </div>
+    </div>
+
+    <div class="total-row">
+      <span class="total-label">TOTAL:</span>
+      <span class="total-line"></span>
+      <span class="total-eur">€</span>
+    </div>
+
+    <div class="sig-row">
+      <div class="sig-block"><div class="sig-space"></div><div class="sig-line"></div><span class="sig-label">Assinatura do Cliente</span></div>
+      <div class="sig-block"><div class="sig-space"></div><div class="sig-line"></div><span class="sig-label">Assinatura C&amp;T</span></div>
+    </div>
+
+    <div class="footer">
+      <span>COSTURA E TENDÊNCIAS</span> — Artigos Para o Lar<br/>
+      TEL.: <span>+351 919 943 031</span> &nbsp;|&nbsp; FB: <span>facebook.com/costuratendencias</span>
+    </div>
+  </div>
+
+
+  <!-- ════════════ ORÇAMENTO 2 ════════════ -->
+  <div class="flyer">
+    <!-- Exatamente igual ao flyer 1 -->
+    <div class="header">
+      <img src="public/assets/logo.png" alt="Logo" />
+      <div class="header-text">
+        <h1>COSTURA E TENDÊNCIAS</h1>
+        <div class="subtitle">Limpeza ao Domicílio — Orçamento</div>
+      </div>
+    </div>
+
+    <div class="client-section">
+      <h3>Dados do Cliente</h3>
+      <div class="client-grid">
+        <div class="client-field"><label>Nome:</label><span class="field-line"></span></div>
+        <div class="client-field"><label>Telefone:</label><span class="field-line"></span></div>
+        <div class="client-field"><label>Morada:</label><span class="field-line"></span></div>
+        <div class="client-field"><label>Data:</label><span class="field-line"></span></div>
+      </div>
+    </div>
+
+    <div class="services-grid">
+      <div class="category">
+        <div class="category-header">Sofás</div>
+        <div class="category-body">
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">1 Lugar</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">2 Lugares</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">3 Lugares</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Lugar extra</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Chaise Longue</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Canto / Modular</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+        </div>
+      </div>
+      <div class="category">
+        <div class="category-header">Cortinas</div>
+        <div class="category-body">
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Por painel</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Por metro linear</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Blackout</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Voile / Transp.</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Impermeab.</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+        </div>
+      </div>
+      <div class="category">
+        <div class="category-header">Cadeiras</div>
+        <div class="category-body">
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Somente assento</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Assento + encosto</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">+ braços</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Cadeirão</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Banco / Puff</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+        </div>
+      </div>
+      <div class="category">
+        <div class="category-header">Colchões</div>
+        <div class="category-body">
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Bebé</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Solteiro</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Individual</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Casal</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Queen / King</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+        </div>
+      </div>
+      <div class="category full-width">
+        <div class="category-header">Carpetes e Alcatifas</div>
+        <div class="category-body" style="display:grid; grid-template-columns:1fr 1fr; gap:1mm 4mm;">
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Preço por m²</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Tapete pequeno</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+          <div class="row"><span class="checkbox"></span><span class="qty">Qtd:<span class="qty-line"></span></span><span class="svc-name">Tapete grande</span><span class="leader"></span><div class="price"><span class="price-line"></span><span class="price-eur">€</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="obs-section">
+      <h3>Observações</h3>
+      <div class="obs-lines">
+        <div class="obs-line"></div>
+        <div class="obs-line"></div>
+      </div>
+    </div>
+
+    <div class="total-row">
+      <span class="total-label">TOTAL:</span>
+      <span class="total-line"></span>
+      <span class="total-eur">€</span>
+    </div>
+
+    <div class="sig-row">
+      <div class="sig-block"><div class="sig-space"></div><div class="sig-line"></div><span class="sig-label">Assinatura do Cliente</span></div>
+      <div class="sig-block"><div class="sig-space"></div><div class="sig-line"></div><span class="sig-label">Assinatura C&amp;T</span></div>
+    </div>
+
+    <div class="footer">
+      <span>COSTURA E TENDÊNCIAS</span> — Artigos Para o Lar<br/>
+      TEL.: <span>+351 919 943 031</span> &nbsp;|&nbsp; FB: <span>facebook.com/costuratendencias</span>
+    </div>
+  </div>
+
+</body>
+</html>
